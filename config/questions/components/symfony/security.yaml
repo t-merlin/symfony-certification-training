@@ -12,7 +12,7 @@
     correction_help:
         - https://github.com/symfony/symfony/blob/2.0/src/Symfony/Component/Security/Http/Firewall/ExceptionListener.php
     answers:
-        - {value: "Symfony\\Component\\Security\\Http\\Firewall\\AuthListener", correct: false, code_snippet: false}
-        - {value: "Symfony\\Component\\Security\\Http\\Firewall\\SecurityListener", correct: false, code_snippet: false}
-        - {value: "Symfony\\Component\\Security\\Http\\Firewall\\ExceptionListener", correct: true, code_snippet: false}
-        - {value: "Symfony\\Component\\Security\\Http\\Firewall\\AuthenticationListener", correct: false, code_snippet: false}
+        - {value: "Symfony\\Component\\Security\\Http\\Firewall\\AuthListener", correct: false}
+        - {value: "Symfony\\Component\\Security\\Http\\Firewall\\SecurityListener", correct: false}
+        - {value: "Symfony\\Component\\Security\\Http\\Firewall\\ExceptionListener", correct: true}
+        - {value: "Symfony\\Component\\Security\\Http\\Firewall\\AuthenticationListener", correct: false}

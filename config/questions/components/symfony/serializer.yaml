@@ -16,5 +16,5 @@
         - https://symfony.com/doc/4.1/components/serializer.html#serializing-interfaces-and-abstract-classes
         - https://github.com/symfony/symfony/blob/4.1/src/Symfony/Component/Serializer/Mapping/ClassDiscriminatorResolverInterface.php
     answers:
-        - {value: "Yes", correct: true, code_snippet: false}
-        - {value: "No", correct: false, code_snippet: false}
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

@@ -168,6 +168,7 @@ class LaunchTrainingCommand extends Command
             $io->text('❌ <error>WRONG !</error>');
         }
 
+        $io->newLine();
         $io->text('Here is some additional links/notes about the question :');
 
         $table = $io->createTable();

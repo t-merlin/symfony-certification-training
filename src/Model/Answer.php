@@ -8,8 +8,6 @@ class Answer
 {
     private string $value;
 
-    private bool $codeSnippet;
-
     private bool $correct;
 
     public function __construct(
@@ -18,7 +16,6 @@ class Answer
     ) {
         $this->value = $value;
         $this->correct = $correct;
-        $this->setCodeSnippet(false);
     }
 
     public function __toString(): string
@@ -31,13 +28,8 @@ class Answer
         return $this->value;
     }
 
-    public function setCodeSnippet(bool $codeSnippet): void
+    public function getCorrect(): bool
     {
-        $this->codeSnippet = $codeSnippet;
-    }
-
-    public function isCodeSnippet(): bool
-    {
-        return $this->codeSnippet;
+        return $this->correct;
     }
 }

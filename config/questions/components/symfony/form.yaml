@@ -7,22 +7,18 @@
                   ->addExtension('text', new MyFormExtension())
                   ->getFormFactory();
           correct: false
-          code_snippet: true
         - value: |
               $formFactory = Forms::createFormFactoryBuilder()
                   ->add(new MyFormExtension())
                   ->getFormFactory();
           correct: false
-          code_snippet: true
         - value: |
               $formFactory = Forms::createFormFactoryBuilder()
                   ->addExtension(new MyFormExtension())
                   ->getFormFactory();
           correct: true
-          code_snippet: true
         - value: |
               $formFactory = Forms::createFormFactoryBuilder()
                   ->registerExtension(new MyFormExtension())
                   ->getFormFactory();
           correct: false
-          code_snippet: true

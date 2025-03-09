@@ -45,34 +45,34 @@
         - https://symfony.com/doc/current/components/http_foundation.html#response
     answers:
         - {value: "No", correct: false, code_snippet: false}
-        - {value: "Yes, with the <info>setStatusCode()</info> method", correct: true, code_snippet: false}
-        - {value: "Yes, with the <info>setCode()</info> method", correct: false, code_snippet: false}
-        - {value: "Yes, with the <info>setStatus()</info> method", correct: false, code_snippet: false}
+        - {value: "Yes, with the <info>setStatusCode()</info> method", correct: true}
+        - {value: "Yes, with the <info>setCode()</info> method", correct: false}
+        - {value: "Yes, with the <info>setStatus()</info> method", correct: false}
 -
     question: "Could the <info>FlashBag</info> messages be retrieved without being removed from the bag ?"
     code_snippet: ~
     correction_help:
         - https://github.com/symfony/symfony/blob/2.1/src/Symfony/Component/HttpFoundation/Session/Flash/FlashBag.php
     answers:
-        - {value: "Yes", correct: true, code_snippet: false}
-        - {value: "No", correct: false, code_snippet: false}
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}
 -
     question: "What kernel event is dispatched when a controller does not return a <info>Response</info> object ?"
     code_snippet: ~
     correction_help:
         - https://symfony.com/doc/5.x/reference/events.html
     answers:
-        - {value: "kernel.terminate", correct: false, code_snippet: false}
-        - {value: "kernel.finish_request", correct: false, code_snippet: false}
-        - {value: "kernel.view", correct: true, code_snippet: false}
-        - {value: "kernel.response", correct: false, code_snippet: false}
+        - {value: "kernel.terminate", correct: false}
+        - {value: "kernel.finish_request", correct: false}
+        - {value: "kernel.view", correct: true}
+        - {value: "kernel.response", correct: false}
 -
     question: "Which statement is true about <info>FlashBag::add()</info> and <info>FlashBag::set()</info> ?"
     code_snippet: ~
     correction_help:
         - https://github.com/symfony/symfony/blob/2.1/src/Symfony/Component/HttpFoundation/Session/Flash/FlashBag.php
     answers:
-        - {value: "The <info>FlashBag::add()</info> method allow to add a set of messages while <info>FlashBag::set()</info> allow to add a single message", correct: false, code_snippet: false}
-        - {value: "The <info>FlashBag::add()</info> method allow to add a single message while <info>FlashBag::set()</info> allow to add a set of messages", correct: true, code_snippet: false}
-        - {value: "The <info>FlashBag::add()</info> method allow to add a single message while <info>FlashBag::set()</info> allow to add a set of messages using a callback", correct: false, code_snippet: false}
-        - {value: "They behave the same way", correct: false, code_snippet: false}
+        - {value: "The <info>FlashBag::add()</info> method allow to add a set of messages while <info>FlashBag::set()</info> allow to add a single message", correct: false}
+        - {value: "The <info>FlashBag::add()</info> method allow to add a single message while <info>FlashBag::set()</info> allow to add a set of messages", correct: true}
+        - {value: "The <info>FlashBag::add()</info> method allow to add a single message while <info>FlashBag::set()</info> allow to add a set of messages using a callback", correct: false}
+        - {value: "They behave the same way", correct: false}

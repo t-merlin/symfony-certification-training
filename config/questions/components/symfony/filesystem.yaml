@@ -4,18 +4,18 @@
     correction_help:
         - http://symfony.com/doc/current/components/filesystem/introduction.html#usage
     answers:
-        - {value: "mirror", correct: true, code_snippet: false}
-        - {value: "copy", correct: true, code_snippet: false}
-        - {value: "delete", correct: false, code_snippet: false}
-        - {value: "chown", correct: true, code_snippet: false}
-        - {value: "move", correct: false, code_snippet: false}
-        - {value: "makePathRelative", correct: true, code_snippet: false}
-        - {value: "symlink", correct: true, code_snippet: false}
+        - {value: "mirror", correct: true}
+        - {value: "copy", correct: true}
+        - {value: "delete", correct: false}
+        - {value: "chown", correct: true}
+        - {value: "move", correct: false}
+        - {value: "makePathRelative", correct: true}
+        - {value: "symlink", correct: true}
 -
     question: "Could paths be manipulated using a Symfony API ?"
     code_snippet: ~
     correction_help:
         - https://symfony.com/doc/5.4/components/filesystem.html#path-manipulation-utilities
     answers:
-        - {value: "Yes", correct: true, code_snippet: false}
-        - {value: "No", correct: false, code_snippet: false}
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

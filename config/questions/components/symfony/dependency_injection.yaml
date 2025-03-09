@@ -26,8 +26,8 @@
         - https://symfony.com/doc/4.4/performance.html#dump-the-service-container-into-a-single-file
         - https://github.com/symfony/symfony/blob/4.4/src/Symfony/Component/DependencyInjection/Dumper/PhpDumper.php#L117
     answers:
-        - {value: "Yes", correct: true, code_snippet: false}
-        - {value: "No", correct: false, code_snippet: false}
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}
 -
     question: "Is the following code snippet valid when trying to add a service into the list of preloaded classes ?"
     code_snippet: |
@@ -41,5 +41,5 @@
     correction_help:
         - https://symfony.com/doc/5.1/reference/dic_tags.html#container-preload
     answers:
-        - {value: "Yes", correct: true, code_snippet: false}
-        - {value: "No", correct: false, code_snippet: false}
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

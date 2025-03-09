@@ -34,9 +34,6 @@ class QuestionCollector
 
             foreach ($question['answers'] as $answer) {
                 $answerModel = new Answer($answer['value'], $answer['correct']);
-                if (array_key_exists('code_snippet', $answer)) {
-                    $answerModel->setCodeSnippet($answer['code_snippet']);
-                }
                 $questionModel->addAnswer($answerModel);
 
                 if ($answer['correct'] === true) {

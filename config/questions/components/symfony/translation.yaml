@@ -23,5 +23,5 @@
     correction_help:
         - https://symfony.com/blog/new-in-symfony-6-1-locale-switcher
     answers:
-        - {value: "Yes", correct: true, code_snippet: false}
-        - {value: "No", correct: false, code_snippet: false}
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

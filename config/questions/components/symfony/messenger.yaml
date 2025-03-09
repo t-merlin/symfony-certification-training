@@ -4,6 +4,6 @@
     correction_help:
         - https://symfony.com/doc/4.2/messenger/handler_results.html
     answers:
-        - {value: "It's not possible due to the asynchronous behavior of the messenger component", correct: false, code_snippet: false}
-        - {value: "With the <info>handler.registry</info> service", correct: false, code_snippet: false}
-        - {value: "With a stamp", correct: true, code_snippet: false}
+        - {value: "It's not possible due to the asynchronous behavior of the messenger component", correct: false}
+        - {value: "With the <info>handler.registry</info> service", correct: false}
+        - {value: "With a stamp", correct: true}

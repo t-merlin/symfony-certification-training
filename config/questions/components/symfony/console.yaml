@@ -5,8 +5,8 @@
         - https://github.com/symfony/console/blob/6.0/Input/InputArgument.php#L24-L26
         - https://symfony.com/doc/6.0/console/input.html#using-command-arguments
     answers:
-        - {value: "Symfony\\Component\\Console\\Input\\InputArgument::NONE", correct: true, code_snippet: false}
-        - {value: "Symfony\\Component\\Console\\Input\\InputArgument::NEGATABLE", correct: true, code_snippet: false}
-        - {value: "Symfony\\Component\\Console\\Input\\InputArgument::REQUIRED", correct: false, code_snippet: false}
-        - {value: "Symfony\\Component\\Console\\Input\\InputArgument::IS_ARRAY", correct: false, code_snippet: false}
-        - {value: "Symfony\\Component\\Console\\Input\\InputArgument::OPTIONAL", correct: false, code_snippet: false}
+        - {value: "Symfony\\Component\\Console\\Input\\InputArgument::NONE", correct: true}
+        - {value: "Symfony\\Component\\Console\\Input\\InputArgument::NEGATABLE", correct: true}
+        - {value: "Symfony\\Component\\Console\\Input\\InputArgument::REQUIRED", correct: false}
+        - {value: "Symfony\\Component\\Console\\Input\\InputArgument::IS_ARRAY", correct: false}
+        - {value: "Symfony\\Component\\Console\\Input\\InputArgument::OPTIONAL", correct: false}

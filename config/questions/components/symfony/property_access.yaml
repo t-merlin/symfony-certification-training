@@ -9,21 +9,17 @@
                   ->getPropertyAccessor(true)
                 ;
           correct: false
-          code_snippet: false
         - value: |
               $accessor = PropertyAccess::createPropertyAccessorBuilder()
                   ->enableMagicCall()
                   ->getPropertyAccessor()
                 ;
           correct: true
-          code_snippet: false
         - value: |
               $accessor = PropertyAccess::createPropertyAccessor()
                   ->enableMagicCall()
                 ;
           correct: false
-          code_snippet: false
         - value: |
               $accessor = PropertyAccess::createPropertyAccessor(true);
           correct: false
-          code_snippet: false

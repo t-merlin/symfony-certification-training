@@ -16,7 +16,7 @@
     correction_help:
         - https://symfony.com/doc/current/routing.html#optional-parameters
     answers:
-        - {value: "/blog/1", correct: true, code_snippet: true}
-        - {value: "A <info>MissingMandatoryParametersException</info> will be raised", correct: false, code_snippet: false}
-        - {value: "/blog/", correct: false, code_snippet: true}
-        - {value: "/blog", correct: false, code_snippet: true}
+        - {value: "/blog/1", correct: true}
+        - {value: "A <info>MissingMandatoryParametersException</info> will be raised", correct: false}
+        - {value: "/blog/", correct: false}
+        - {value: "/blog", correct: false}
