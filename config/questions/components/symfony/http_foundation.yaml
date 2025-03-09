@@ -1,0 +1,68 @@
+-
+    question: "For a request to <info>http://example.com/blog/index.php/post/hello-world</info>, what will be the value of <info>$pathInfo</info> in the following code ?"
+    code_snippet: "$pathInfo = $request->getPathInfo();"
+    correction_help:
+        - https://symfony.com/doc/current/components/http_foundation.html#identifying-a-request
+    answers:
+        - {value: "/index.php/post/hello-world", correct: false}
+        - {value: "/blog/index.php/post/hello-world", correct: false}
+        - {value: "/post/hello-world", correct: true}
+        - {value: "example.com/blog/index.php/post/hello-world", correct: false}
+-
+    question: "How could you simulate a GET request to <info>/hello-world</info> ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/current/components/http_foundation.html#identifying-a-request
+    answers:
+        - {value: "$request = Request::create(null, '/hello-world');", correct: false, code_snippet: true}
+        - {value: "$request = Request::create('/hello-world', 'GET');", correct: true, code_snippet: true}
+        - {value: "$request = Request::create('GET', '/hello-world');", correct: false, code_snippet: true}
+        - {value: "$request = Request::create('/hello-world');", correct: true, code_snippet: true}
+-
+    question: "Which of the following are valid Symfony responses classes extending the base <info>Symfony\\Component\\HttpFoundation\\Response</info> class ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/current/components/http_foundation/introduction.html#redirecting-the-user
+        - https://symfony.com/doc/current/components/http_foundation/introduction.html#streaming-a-response
+        - https://symfony.com/doc/current/components/http_foundation/introduction.html#serving-files
+        - https://symfony.com/doc/current/components/http_foundation/introduction.html#creating-a-json-response
+    answers:
+        - {value: "FileResponse", correct: false, code_snippet: false}
+        - {value: "BinaryFileResponse", correct: true, code_snippet: false}
+        - {value: "StreamedResponse", correct: true, code_snippet: false}
+        - {value: "BinaryResponse", correct: false, code_snippet: false}
+        - {value: "StreamResponse", correct: false, code_snippet: false}
+        - {value: "ImageResponse", correct: false, code_snippet: false}
+        - {value: "RedirectedResponse", correct: false, code_snippet: false}
+        - {value: "RedirectResponse", correct: true, code_snippet: false}
+        - {value: "NotFoundResponse", correct: false, code_snippet: false}
+        - {value: "ImageFileResponse", correct: false, code_snippet: false}
+        - {value: "JsonResponse", correct: true, code_snippet: false}
+-
+    question: "Is it possible to change the status code of a <info>Symfony\\Component\\HttpFoundation\\Response</info> ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/current/components/http_foundation.html#response
+    answers:
+        - {value: "No", correct: false, code_snippet: false}
+        - {value: "Yes, with the <info>setStatusCode()</info> method", correct: true, code_snippet: false}
+        - {value: "Yes, with the <info>setCode()</info> method", correct: false, code_snippet: false}
+        - {value: "Yes, with the <info>setStatus()</info> method", correct: false, code_snippet: false}
+-
+    question: "Could the <info>FlashBag</info> messages be retrieved without being removed from the bag ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/2.1/src/Symfony/Component/HttpFoundation/Session/Flash/FlashBag.php
+    answers:
+        - {value: "Yes", correct: true, code_snippet: false}
+        - {value: "No", correct: false, code_snippet: false}
+-
+    question: "What kernel event is dispatched when a controller does not return a <info>Response</info> object ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/5.x/reference/events.html
+    answers:
+        - {value: "kernel.terminate", correct: false, code_snippet: false}
+        - {value: "kernel.finish_request", correct: false, code_snippet: false}
+        - {value: "kernel.view", correct: true, code_snippet: false}
+        - {value: "kernel.response", correct: false, code_snippet: false}

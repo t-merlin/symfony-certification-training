@@ -1,0 +1,30 @@
+-
+    question: "In which cases the <info>env_var</info> parameter will be evaluated to <info>false</info>?"
+    code_snippet: |
+        # config/services.yaml
+        parameters:
+            env_var: '%env(defined:FOO)%'
+    answers:
+        - {value: "When <info>FOO</info> is an <info>empty string</info>", correct: true}
+        - {value: "When <info>FOO</info> equals to <info>\"false\"</info>", correct: false}
+        - {value: "When <info>FOO</info> contains only spaces", correct: false}
+        - {value: "When <info>FOO</info> is <info>null</info>", correct: true}
+        - {value: "When the <info>FOO</info> environment variable doesn't exist", correct: true}
+
+-
+    question: "What is the exact meaning of <info>DIC</info>?"
+    code_snippet: ~
+    answers:
+        - {value: "Dependency Injection Container", correct: true}
+        - {value: "Dependencies Injection Component", correct: false}
+        - {value: "Dependencies Injected Continuously", correct: false}
+
+-
+    question: "Could the container be dumped into a single file ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/4.4/performance.html#dump-the-service-container-into-a-single-file
+        - https://github.com/symfony/symfony/blob/4.4/src/Symfony/Component/DependencyInjection/Dumper/PhpDumper.php#L117
+    answers:
+        - {value: "Yes", correct: true, code_snippet: false}
+        - {value: "No", correct: false, code_snippet: false}

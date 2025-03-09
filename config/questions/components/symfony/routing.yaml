@@ -1,0 +1,22 @@
+-
+    question: "Considering the following code snippet, what will be the generated URL when calling <info>path('list')</info> from a Twig Template ?"
+    code_snippet: |
+        /**
+         * @Route(
+         *  "/blog/{!page}",
+         *  name="list",
+         *  requirements={"page": "\d+"},
+         *  defaults={"page": 1}
+         * )
+         */
+        public function list(int $page): Response
+        {
+            // ...
+        }
+    correction_help:
+        - https://symfony.com/doc/current/routing.html#optional-parameters
+    answers:
+        - {value: "/blog/1", correct: true, code_snippet: true}
+        - {value: "A <info>MissingMandatoryParametersException</info> will be raised", correct: false, code_snippet: false}
+        - {value: "/blog/", correct: false, code_snippet: true}
+        - {value: "/blog", correct: false, code_snippet: true}

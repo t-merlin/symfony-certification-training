@@ -1,0 +1,11 @@
+-
+    question: "What is the primary difference between a method declared as static and a normal method ?"
+    code_snippet: ~
+    correction_help:
+        - https://php.net/manual/en/language.oop5.static.php
+    answers:
+        - {value: "There is no functional difference between a static and non-static method", correct: false, code_snippet: false}
+        - {value: "Static methods can only be called using the <info>::</info> syntax and never from an instance", correct: false, code_snippet: false}
+        - {value: "Static methods cannot be called from within class instances", correct: false, code_snippet: false}
+        - {value: "Static methods don't have access to the <info>self</info> keyword", correct: false, code_snippet: false}
+        - {value: "Static methods do not provide a reference to <info>$this</info>", correct: true, code_snippet: false}

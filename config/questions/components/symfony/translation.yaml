@@ -1,0 +1,27 @@
+-
+    question: "Is the following code valid ?"
+    code_snippet: |
+        <?php
+
+        use Symfony\Component\Translation\LocaleSwitcher;
+
+        class SomeClass
+        {
+            public function __construct(
+                private LocaleSwitcher $localeSwitcher,
+            ) {}
+
+            public function someMethod(): void
+            {
+                $this->localeSwitcher->runWithLocale('es', function() {
+                    // ...
+                });
+
+                // ...
+            }
+        }
+    correction_help:
+        - https://symfony.com/blog/new-in-symfony-6-1-locale-switcher
+    answers:
+        - {value: "Yes", correct: true, code_snippet: false}
+        - {value: "No", correct: false, code_snippet: false}

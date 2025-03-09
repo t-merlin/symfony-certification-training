@@ -1,0 +1,21 @@
+-
+    question: "Considering the following code snippet, which of the following <info>$letters</info> variable declarations will make this script generate an HTML list of the 26 alphabet letters on any PHP versions ?"
+    code_snippet: |
+        <ul>
+            <?php foreach ($letters as $letter) : ?>
+                <li><?= $letter ?></li>
+            <?php endforeach ?>
+        </ul>
+    correction_help:
+        - http://php.net/manual/en/function.range.php
+        - http://php.net/manual/en/function.explode.php
+        - http://php.net/manual/en/function.str-split.php
+    answers:
+        - {value: "$letters = str_split('ABCDEFGHIJKLMNOPQRSTUVWXYZ');", correct: true, code_snippet: true}
+        - {value: "$letters = explode('', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');", correct: true, code_snippet: true}
+        - {value: "$letters = range('A', 'Z');", correct: true, code_snippet: true}
+        - {value: "$letters = split('//', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');", correct: false, code_snippet: true}
+        - {value: "$letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';", correct: false, code_snippet: true}
+
+
+

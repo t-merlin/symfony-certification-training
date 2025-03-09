@@ -1,0 +1,10 @@
+-
+    question: "Which internal method is called when using the <info>deprecated</info> tag ?"
+    code_snippet: ~
+    correction_help:
+        - https://twig.symfony.com/doc/1.x/tags/deprecated.html
+    answers:
+        - {value: "<info>trigger_error()</info>", correct: true, code_snippet: false}
+        - {value: "<info>sprintf</info>", correct: false, code_snippet: false}
+        - {value: "<info>user_error()</info>", correct: false, code_snippet: false}
+        - {value: "<info>error_log()</info>", correct: false, code_snippet: false}

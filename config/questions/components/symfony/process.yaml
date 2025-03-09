@@ -1,0 +1,20 @@
+-
+    question: "What arguments receives the callback passed to <info>Process::waitUntil()</info> ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/4.2/components/process.html
+    answers:
+        - {value: "The entire output produced by the process since it's been started", correct: false, code_snippet: false}
+        - {value: "The type of output, and the last produced output by the process", correct: true, code_snippet: false}
+        - {value: "The current execution time of the process", correct: false, code_snippet: false}
+        - {value: "Nothing : needed information must be passed to the closure with <info>use</info>", correct: false, code_snippet: false}
+        - {value: "The type of output", correct: false, code_snippet: false}
+-
+    question: "Is it possible to explicitly add lines to the process output from the main script ?"
+    code_snippet: ~
+    correction_help:
+        - "https://github.com/symfony/symfony/blob/6.2/src/Symfony/Component/Process/Process.php"
+        - "Note : see the <info>addOutput()</info> method"
+    answers:
+        - {value: "Yes", correct: true, code_snippet: false}
+        - {value: "No", correct: false, code_snippet: false}

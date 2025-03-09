@@ -1,0 +1,28 @@
+-
+    question: "How to add an extension <info>MyForm</info> to the <info>Form</info> component ?"
+    code_snippet: ~
+    answers:
+        - value: |
+              $formFactory = Forms::createFormFactoryBuilder()
+                  ->addExtension('text', new MyFormExtension())
+                  ->getFormFactory();
+          correct: false
+          code_snippet: true
+        - value: |
+              $formFactory = Forms::createFormFactoryBuilder()
+                  ->add(new MyFormExtension())
+                  ->getFormFactory();
+          correct: false
+          code_snippet: true
+        - value: |
+              $formFactory = Forms::createFormFactoryBuilder()
+                  ->addExtension(new MyFormExtension())
+                  ->getFormFactory();
+          correct: true
+          code_snippet: true
+        - value: |
+              $formFactory = Forms::createFormFactoryBuilder()
+                  ->registerExtension(new MyFormExtension())
+                  ->getFormFactory();
+          correct: false
+          code_snippet: true

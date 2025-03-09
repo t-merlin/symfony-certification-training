@@ -1,0 +1,29 @@
+-
+    question: "What is the way to enable magic <info>__call</info> method ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/current/components/property_access/introduction.html#magic-call-method
+    answers:
+        - value: |
+              $accessor = PropertyAccess::createPropertyAccessorBuilder()
+                  ->getPropertyAccessor(true)
+                ;
+          correct: false
+          code_snippet: true
+        - value: |
+              $accessor = PropertyAccess::createPropertyAccessorBuilder()
+                  ->enableMagicCall()
+                  ->getPropertyAccessor()
+                ;
+          correct: true
+          code_snippet: true
+        - value: |
+              $accessor = PropertyAccess::createPropertyAccessor()
+                  ->enableMagicCall()
+                ;
+          correct: false
+          code_snippet: true
+        - value: |
+              $accessor = PropertyAccess::createPropertyAccessor(true);
+          correct: false
+          code_snippet: true

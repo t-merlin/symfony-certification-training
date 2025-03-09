@@ -1,0 +1,21 @@
+-
+    question: "Which of these classes are not SPL data structures ?"
+    code_snippet: ~
+    correction_help:
+        - https://www.php.net/book.spl
+    answers:
+        - {value: "SplPriorityQueue", correct: false, code_snippet: false}
+        - {value: "SplQueue", correct: false, code_snippet: false}
+        - {value: "SplLinkedList", correct: true, code_snippet: false}
+        - {value: "SplArrayStorage", correct: true, code_snippet: false}
+        - {value: "SplStack", correct: false, code_snippet: false}
+-
+    question: "What is the difference between <info>float</info> and <info>double</info> types ?"
+    code_snippet: ~
+    correction_help:
+        - https://www.php.net/manual/en/function.is-double.php
+        - https://stackoverflow.com/questions/3194932/is-there-a-double-type-in-php
+    answers:
+        - {value: "Like in the C language, <info>double</info> type uses more memory space than <info>float</info>, allowing more precision", correct: false, code_snippet: false}
+        - {value: "<info>double</info> doesn't exist in PHP, and functions like <info>is_double()</info> are a legacy from the C language", correct: true, code_snippet: false}
+        - {value: "<info>double</info> and <info>float</info> are aliases and both can be used the same way", correct: false, code_snippet: false}

@@ -1,0 +1,18 @@
+-
+    question: "What is the signature of the <info>voteOnAttribute()</info> method from <info>Symfony\\Component\\Security\\Core\\Authorization\\Voter\\Voter</info> abstract class?"
+    code_snippet: ~
+    answers:
+        - {value: "voteOnAttribute(string $attribute, TokenInterface $token, mixed $subject)", correct: false}
+        - {value: "voteOnAttribute(TokenInterface $token, string $attribute, mixed $subject)", correct: false}
+        - {value: "voteOnAttribute(TokenInterface $token, mixed $subject, string $attribute)", correct: false}
+        - {value: "voteOnAttribute(string $attribute, mixed $subject, TokenInterface $token)", correct: true}
+-
+    question: "What is the listener that handles security exceptions and when appropriate, helps the user to authenticate ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/2.0/src/Symfony/Component/Security/Http/Firewall/ExceptionListener.php
+    answers:
+        - {value: "Symfony\\Component\\Security\\Http\\Firewall\\AuthListener", correct: false, code_snippet: false}
+        - {value: "Symfony\\Component\\Security\\Http\\Firewall\\SecurityListener", correct: false, code_snippet: false}
+        - {value: "Symfony\\Component\\Security\\Http\\Firewall\\ExceptionListener", correct: true, code_snippet: false}
+        - {value: "Symfony\\Component\\Security\\Http\\Firewall\\AuthenticationListener", correct: false, code_snippet: false}

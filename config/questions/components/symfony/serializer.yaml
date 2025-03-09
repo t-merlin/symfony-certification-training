@@ -1,0 +1,11 @@
+-
+    question: "Is the following code valid ?"
+    code_snippet: |
+        #[Serializer\Context(
+            normalizationContext: [DateTimeNormalizer::FORMAT_KEY => \DateTime::RFC3339],
+            groups: ['extended']
+        )]
+        public \DateTime $date;
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}
