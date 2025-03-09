@@ -9,3 +9,12 @@
         - {value: "Static methods cannot be called from within class instances", correct: false, code_snippet: false}
         - {value: "Static methods don't have access to the <info>self</info> keyword", correct: false, code_snippet: false}
         - {value: "Static methods do not provide a reference to <info>$this</info>", correct: true, code_snippet: false}
+-
+    question: "How to define a class that inherits from <info>Foo</info> ?"
+    code_snippet: ~
+    correction_help:
+        - https://www.php.net/manual/en/language.oop5.inheritance.php
+    answers:
+        - {value: "class Bar extends Foo {}", correct: true, code_snippet: false}
+        - {value: "class Bar childof Foo {}", correct: false, code_snippet: false}
+        - {value: "class Bar inherits Foo {}", correct: false, code_snippet: false}

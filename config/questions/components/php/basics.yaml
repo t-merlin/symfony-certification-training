@@ -16,6 +16,30 @@
         - {value: "$letters = range('A', 'Z');", correct: true, code_snippet: true}
         - {value: "$letters = split('//', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');", correct: false, code_snippet: true}
         - {value: "$letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';", correct: false, code_snippet: true}
+-
+    question: "Considering the following code snippet, which statement should replace the <info>????</info> placeholder in order to make this code snippet output the string <info>private</info> ?"
+    code_snippet: |
+        <?php
 
+            class Bar
+            {
+                private $foo = 'private';
+            }
 
+            function getter()
+            {
+                return function() {
+                    return $this->foo;
+                };
+            }
+
+            ????
+    correction_help:
+        - https://php.net/manual/en/class.closure.php
+    answers:
+        - {value: "echo getter()->bindTo(new Bar(), 'Bar')();", correct: true, code_snippet: false}
+        - {value: "echo getter()->bindTo(new Bar())();", correct: false, code_snippet: false}
+        - {value: "echo getter()->bindTo('Bar', 'Bar')();", correct: false, code_snippet: false}
+        - {value: "echo getter()->bindTo(new Bar(), new Bar())();", correct: true, code_snippet: false}
+        - {value: "This is not possible", correct: false, code_snippet: false}
 

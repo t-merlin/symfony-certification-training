@@ -66,3 +66,13 @@
         - {value: "kernel.finish_request", correct: false, code_snippet: false}
         - {value: "kernel.view", correct: true, code_snippet: false}
         - {value: "kernel.response", correct: false, code_snippet: false}
+-
+    question: "Which statement is true about <info>FlashBag::add()</info> and <info>FlashBag::set()</info> ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/2.1/src/Symfony/Component/HttpFoundation/Session/Flash/FlashBag.php
+    answers:
+        - {value: "The <info>FlashBag::add()</info> method allow to add a set of messages while <info>FlashBag::set()</info> allow to add a single message", correct: false, code_snippet: false}
+        - {value: "The <info>FlashBag::add()</info> method allow to add a single message while <info>FlashBag::set()</info> allow to add a set of messages", correct: true, code_snippet: false}
+        - {value: "The <info>FlashBag::add()</info> method allow to add a single message while <info>FlashBag::set()</info> allow to add a set of messages using a callback", correct: false, code_snippet: false}
+        - {value: "They behave the same way", correct: false, code_snippet: false}

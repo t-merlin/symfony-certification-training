@@ -28,3 +28,18 @@
     answers:
         - {value: "Yes", correct: true, code_snippet: false}
         - {value: "No", correct: false, code_snippet: false}
+-
+    question: "Is the following code snippet valid when trying to add a service into the list of preloaded classes ?"
+    code_snippet: |
+        services:
+            App\SomeNamespace\SomeService:
+                tags:
+                    - { name: 'container.preload', class: 'App\SomeClass' }
+                    - { name: 'container.preload', class: 'App\Some\OtherClass' }
+
+            # ...
+    correction_help:
+        - https://symfony.com/doc/5.1/reference/dic_tags.html#container-preload
+    answers:
+        - {value: "Yes", correct: true, code_snippet: false}
+        - {value: "No", correct: false, code_snippet: false}
