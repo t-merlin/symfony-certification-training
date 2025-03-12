@@ -1,0 +1,8 @@
+-
+    question: "Is it possible to override the error handler used ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/5.3/components/runtime.html#using-options
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

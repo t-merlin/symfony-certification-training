@@ -1,6 +1,8 @@
 -
     question: "How to add an extension <info>MyForm</info> to the <info>Form</info> component ?"
     code_snippet: ~
+    correction_help:
+        - http://...
     answers:
         - value: |
               $formFactory = Forms::createFormFactoryBuilder()

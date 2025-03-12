@@ -1,0 +1,14 @@
+-
+    question: "Given the following code, how would you delete the cache item identified by <info>some_item</info> key ?"
+    code_snippet: |
+        use Symfony\Component\Cache\Adapter\FilesystemAdapter;
+
+        $cache = new FilesystemAdapter('app.cache');
+    correction_help:
+        - https://symfony.com/doc/current/components/cache.html#cache-contracts
+        - https://symfony.com/doc/current/components/cache/cache_pools.html#removing-cache-items
+    answers:
+        - {value: "$cache->delete('some_item');", correct: true}
+        - {value: "$cache->deleteItem('some_item');", correct: true}
+        - {value: "$cache->remove('some_item');", correct: false}
+        - {value: "$cache->removeItem('some_item');", correct: false}

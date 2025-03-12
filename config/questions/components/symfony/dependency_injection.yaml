@@ -4,6 +4,8 @@
         # config/services.yaml
         parameters:
             env_var: '%env(defined:FOO)%'
+    correction_help:
+        - http://...
     answers:
         - {value: "When <info>FOO</info> is an <info>empty string</info>", correct: true}
         - {value: "When <info>FOO</info> equals to <info>\"false\"</info>", correct: false}
@@ -14,6 +16,8 @@
 -
     question: "What is the exact meaning of <info>DIC</info>?"
     code_snippet: ~
+    correction_help:
+        - http://...
     answers:
         - {value: "Dependency Injection Container", correct: true}
         - {value: "Dependencies Injection Component", correct: false}
@@ -43,3 +47,84 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "Given we add the following code snippet extension to the container, what extra steps are needed in order to trigger the <info>load</info> method of <info>FooExtension</info> ?"
+    code_snippet: |
+        $fooExtension = new FooExtension();
+        $container = new ContainerBuilder();
+        $container->registerExtension($fooExtension);
+    correction_help:
+        - https://symfony.com/doc/2.3/components/dependency_injection/compilation.html
+    answers:
+        - {value: "Call <info>$container->loadFromExtension($fooExtension)</info>", correct: false}
+        - {value: "Call <info>$container->compile()</info>", correct: true}
+        - {value: "Load a config file via a container loader (<info>YamlFileLoader</info>, <info>XmlFileLoader</info>, etc...) OR call <info>$container->loadFromExtension($fooExtension->getAlias())</info>", correct: true}
+        - {value: "Load a config file via a container loader (<info>YamlFileLoader</info>, <info>XmlFileLoader</info>, etc...) AND call <info>$container->loadFromExtension($fooExtension->getAlias())</info>", correct: true}
+-
+    question: "With the following service definition, how is it possible to create an alias of the <info>Foo</info> service ?"
+    code_snippet: |
+        services:
+            foo:
+                class: Example\Foo
+    correction_help:
+        - https://symfony.com/doc/2.7/service_container/alias_private.html#aliasing
+    answers:
+        - value: |
+              services:
+                  foo:
+                      class: Example\Foo
+                  bar: '@foo'
+          correct: true
+        - value: |
+              services:
+                  foo:
+                      class: Example\Foo
+                  bar:
+                      alias: foo
+          correct: true
+        - value: |
+              services:
+                  foo:
+                      class: Example\Foo
+                      alias:
+                          - bar
+          correct: false
+        - value: |
+              services:
+                  foo:
+                      class: Example\Foo
+                      alias: [bar]
+          correct: false
+        - value: |
+              services:
+                  foo:
+                      class: Example\Foo
+                      alias: bar
+          correct: false
+-
+    question: "Could sythetic services be injected into other services ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/2.7/service_container/synthetic_services.html
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}
+-
+    question: "Could the container be preloaded using Opcache preloading ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/4.4/performance.html#use-the-opcache-class-preloading
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}
+-
+    question: "What happens if, in the code snippet, the <info>Prod</info> case doesn't exist in the <info>Environment</info> enum ?"
+    code_snippet: |
+        parameters:
+            typed_env: '%env(enum:App\Enum\Environment:Prod)%'
+    correction_help:
+        - https://github.com/symfony/symfony/blob/6.2/src/Symfony/Component/DependencyInjection/EnvVarProcessor.php#L103
+    answers:
+        - {value: "<info>null</info> is used", correct: false}
+        - {value: "A <info>RuntimeException</info> is thrown", correct: true}
+        - {value: "An empty string is used", correct: false}

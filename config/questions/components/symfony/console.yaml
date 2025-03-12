@@ -10,3 +10,21 @@
         - {value: "Symfony\\Component\\Console\\Input\\InputArgument::REQUIRED", correct: false}
         - {value: "Symfony\\Component\\Console\\Input\\InputArgument::IS_ARRAY", correct: false}
         - {value: "Symfony\\Component\\Console\\Input\\InputArgument::OPTIONAL", correct: false}
+-
+    question: "Given the context where <info>COLUMNS</info> is set as en environment variable with the value of <info>120</info>, what will be the value returned using the following code ?"
+    code_snippet: |
+        <?php
+
+        use Symfony\Component\Console\Terminal;
+
+        echo (new Terminal())->getWidth();
+    correction_help:
+        - https://github.com/symfony/symfony/blob/3.2/src/Symfony/Component/Console/Terminal.php
+    answers:
+        - {value: "An error", correct: false}
+        - {value: "0", correct: false}
+        - {value: "120", correct: true}
+        - {value: "The width of the actual terminal if used in the context of a terminal", correct: false}
+        - {value: "200", correct: false}
+        - {value: "Nothing", correct: false}
+        - {value: "80", correct: false}

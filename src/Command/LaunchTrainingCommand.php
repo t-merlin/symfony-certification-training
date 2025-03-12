@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Command;
 
 use App\Collection\QuestionCollection;
+use App\Enum\TrainingModeEnum;
 use App\Model\Answer;
 use App\Model\Question;
 use App\Service\QuestionCollector;
@@ -33,7 +34,6 @@ class LaunchTrainingCommand extends Command
     public function __construct()
     {
         parent::__construct();
-        $this->questionCollection = QuestionCollector::collect();
         $this->answeredQuestions = new QuestionCollection();
     }
 
@@ -42,7 +42,8 @@ class LaunchTrainingCommand extends Command
         $io = new SymfonyStyle($input, $output);
 
         $this->greetTester($io);
-        $this->collectQuestions($io);
+        $trainingMode = $this->chooseTrainingMode($input, $output, $io);
+        $this->collectQuestions($trainingMode, $io);
         $this->startTraining($input, $output, $io);
         $this->renderResults($io);
 
@@ -56,13 +57,50 @@ class LaunchTrainingCommand extends Command
         $io->note('If you see an error according to you in one of the questions, please open an issue !');
     }
 
-    protected function collectQuestions(SymfonyStyle $io): void
-    {
+    protected function chooseTrainingMode(
+        InputInterface $input,
+        OutputInterface $output,
+        SymfonyStyle $io
+    ): string {
+        $io->newLine();
+        $io->title('Training mode selection');
+        $io->text('You can choose between three types of training mode ! Here is an explanation for each one :');
+
         $table = $io->createTable();
-        $table->setHeaders(['Number of questions available']);
-        $table->setRow(0, [$this->questionCollection->count()]);
+        $table->setHeaders(
+            [
+                'Type',
+                'Description'
+            ]
+        );
+        $table->setRows(
+            [
+                [TrainingModeEnum::TRAINING->value, 'A training session of 20 questions on all possible topics'],
+                [TrainingModeEnum::EXAMEN->value, "A session on 80 questions on all possible topics like the final exam"]
+            ]
+        );
 
         $table->render();
+
+        $helper = $this->getHelper('question');
+        $choiceQuestion = new ChoiceQuestion(
+            'Which training type do you want ?',
+            [TrainingModeEnum::TRAINING->value, TrainingModeEnum::EXAMEN->value],
+            'training'
+        );
+
+        return $helper->ask($input, $output, $choiceQuestion);
+    }
+
+    protected function collectQuestions(string $trainingMode, SymfonyStyle $io): void
+    {
+        $this->questionCollection = QuestionCollector::collect($trainingMode);
+
+//        $table = $io->createTable();
+//        $table->setHeaders(['Number of questions available']);
+//        $table->setRow(0, [$this->questionCollection->count()]);
+//
+//        $table->render();
     }
 
     protected function startTraining(
@@ -71,7 +109,7 @@ class LaunchTrainingCommand extends Command
         SymfonyStyle $io
     ): void {
         $io->newLine();
-        $io->section('Starting training session');
+        $io->title('Starting training session');
         $helper = $this->getHelper('question');
 
         $outputStyle = new OutputFormatterStyle('#000000', '#ECECEC');

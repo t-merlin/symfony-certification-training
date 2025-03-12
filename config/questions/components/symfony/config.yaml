@@ -1,0 +1,10 @@
+-
+    question: "What is the 2nd argument of <info>Symfony\\Component\\Config\\ConfigCacheFactory::cache</info> method ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/2.7/src/Symfony/Component/Config/ConfigCacheFactory.php
+    answers:
+        - {value: "A callback executed if the cache has to be refreshed", correct: true}
+        - {value: "An array of options", correct: false}
+        - {value: "The resource filename", correct: false}
+        - {value: "A boolean to set the debug mode", correct: false}

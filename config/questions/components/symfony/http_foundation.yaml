@@ -76,3 +76,11 @@
         - {value: "The <info>FlashBag::add()</info> method allow to add a single message while <info>FlashBag::set()</info> allow to add a set of messages", correct: true}
         - {value: "The <info>FlashBag::add()</info> method allow to add a single message while <info>FlashBag::set()</info> allow to add a set of messages using a callback", correct: false}
         - {value: "They behave the same way", correct: false}
+-
+    question: "Could all <info>FlashBag</info> messages be overriden ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/2.1/src/Symfony/Component/HttpFoundation/Session/Flash/FlashBag.php#L127
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

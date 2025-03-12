@@ -13,7 +13,7 @@
     answers:
         - {value: "$letters = str_split('ABCDEFGHIJKLMNOPQRSTUVWXYZ');", correct: true}
         - {value: "$letters = explode('', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');", correct: true}
-        - {value: "$letters = range('A', 'Z');", correct: true, code_snippet: true}
+        - {value: "$letters = range('A', 'Z');", correct: true}
         - {value: "$letters = split('//', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');", correct: false}
         - {value: "$letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';", correct: false}
 -
@@ -42,4 +42,30 @@
         - {value: "echo getter()->bindTo('Bar', 'Bar')();", correct: false}
         - {value: "echo getter()->bindTo(new Bar(), new Bar())();", correct: true}
         - {value: "This is not possible", correct: false}
+-
+    question: "What will be the output of the following code ?"
+    code_snippet: "echo count(explode('/', '///'));"
+    correction_help:
+        - https://php.net/manual/en/function.explode.php
+    answers:
+        - {value: "4", correct: true}
+        - {value: "3", correct: false}
+        - {value: "2", correct: false}
+        - {value: "0", correct: false}
+        - {value: "An error", correct: false}
+-
+    question: "Given the following code, what will be displayed ?"
+    code_snippet: |
+        <?php
 
+            $a = (object) ['a' => 'a'];
+            $b = (object) ['a' => 'a'];
+
+            echo $b <=> $a;
+    correction_help:
+        - https://www.php.net/manual/en/language.operators.comparison.php
+        - https://www.php.net/manual/en/types.comparisons.php
+    answers:
+        - {value: "-1", correct: false}
+        - {value: "0", correct: true}
+        - {value: "1", correct: false}

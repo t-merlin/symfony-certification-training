@@ -30,4 +30,9 @@ class QuestionCollection
     {
         shuffle($this->questions);
     }
+
+    public function slice(int $length)
+    {
+        $this->questions = array_slice($this->questions, 0, $length);
+    }
 }

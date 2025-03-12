@@ -6,6 +6,8 @@
             groups: ['extended']
         )]
         public \DateTime $date;
+    correction_help:
+        - http://...
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}

@@ -1,0 +1,22 @@
+-
+    question: "What is enforced by the <info>File</info> constraint in the following code ?"
+    code_snippet: |
+        <?php
+
+        # ...
+
+        use Symfony\Component\Validator\Constraints as Assert;
+
+        class UserProfile
+        {
+            #[Assert\File(extensions: 'jpg')]
+            protected $avatar;
+
+            // ...
+        }
+    correction_help:
+        - https://symfony.com/doc/6.2/reference/constraints/File.html#extensions
+    answers:
+        - {value: "The file should be compatible with JPEG media types", correct: true}
+        - {value: "The file should have the <info>.jpg</info> extension", correct: true}
+        - {value: "The file should have the <info>.jpeg</info> extension", correct: false}

@@ -1,0 +1,43 @@
+-
+    question: "In which order does Symfony trigger the following events ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/2.3/src/Symfony/Component/HttpKernel/KernelEvents.php
+    answers:
+        - value: |
+                1. kernel.request
+                2. kernel.view
+                3. kernel.controller
+                2. kernel.response
+                2. kernel.terminate
+          correct: false
+        - value: |
+                1. kernel.request
+                2. kernel.view
+                3. kernel.controller
+                2. kernel.terminate
+                2. kernel.response
+          correct: false
+        - value: |
+                1. kernel.request
+                2. kernel.controller
+                3. kernel.view
+                2. kernel.response
+                2. kernel.terminate
+          correct: true
+        - value: |
+                1. kernel.request
+                2. kernel.controller
+                3. kernel.view
+                2. kernel.terminate
+                2. kernel.response
+          correct: false
+-
+    question: "Could the build directory be overriden ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/5.2/reference/configuration/kernel.html#build-directory
+        - https://github.com/symfony/symfony/blob/5.2/src/Symfony/Component/HttpKernel/Kernel.php#L337
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

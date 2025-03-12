@@ -1,6 +1,8 @@
 -
     question: "What is the signature of the <info>voteOnAttribute()</info> method from <info>Symfony\\Component\\Security\\Core\\Authorization\\Voter\\Voter</info> abstract class?"
     code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/current/security/voters.html#the-voter-interface
     answers:
         - {value: "voteOnAttribute(string $attribute, TokenInterface $token, mixed $subject)", correct: false}
         - {value: "voteOnAttribute(TokenInterface $token, string $attribute, mixed $subject)", correct: false}

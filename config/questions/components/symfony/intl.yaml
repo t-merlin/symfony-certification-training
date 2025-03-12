@@ -1,0 +1,8 @@
+-
+    question: "Could the alpha3 code of a language be retrieved ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/4.3/src/Symfony/Component/Intl/Languages.php#L72
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

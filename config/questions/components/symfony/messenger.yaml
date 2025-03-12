@@ -7,3 +7,12 @@
         - {value: "It's not possible due to the asynchronous behavior of the messenger component", correct: false}
         - {value: "With the <info>handler.registry</info> service", correct: false}
         - {value: "With a stamp", correct: true}
+-
+    question: "Could information like the transport name and so on can be retrieved from the worker ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/blog/new-in-symfony-5-4-messenger-improvements#worker-metadata
+        - https://github.com/symfony/symfony/blob/5.4/src/Symfony/Component/Messenger/WorkerMetadata.php
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

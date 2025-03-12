@@ -8,3 +8,34 @@
         - {value: "<info>sprintf</info>", correct: false}
         - {value: "<info>user_error()</info>", correct: false}
         - {value: "<info>error_log()</info>", correct: false}
+-
+    question: "What is the output of the following code snippet ?"
+    code_snippet: |
+        {% for i in range(1, 10, 2) %}
+            {{ i }}{% if not loop.last %},{% endif %}
+        {% endfor %}
+    correction_help:
+        - https://twig.symfony.com/doc/functions/range.html
+    answers:
+        - {value: "1,2,3,4,5,6,7,8,9,10", correct: false}
+        - {value: "1,10,1,10", correct: false}
+        - {value: "1,3,5,7,9", correct: true}
+        - {value: "2,4,6,8,10", correct: false}
+-
+    question: "Which expression can be applied to <info>???</info> in order to display the name of each people along with his name and age ?"
+    code_snippet: |
+        {% set people = [
+            {firstname: "Bob", lastname: "Smith", age: 12},
+            {firstname: "Alice", lastname: "Dupond", age: 13},
+        ] %}
+
+        {{ ??? }} {# Must display "Bob Smith is 12 years old, Alice Dupond is 13 years old" #}
+    correction_help:
+        - https://twig.symfony.com/doc/1.x/filters/map.html
+        - https://twig.symfony.com/doc/1.x/filters/join.html
+        - https://twig.symfony.com/doc/1.x/filters/split.html
+    answers:
+        - {value: "{{ people|map(p => \"#{p.firstname} #{p.lastname} is #{p.age} years old\") }}", correct: true}
+        - {value: "None of those", correct: false}
+        - {value: "{{ people|split(', ') }}", correct: false}
+        - {value: "{{ people|join(', ') }}", correct: false}
