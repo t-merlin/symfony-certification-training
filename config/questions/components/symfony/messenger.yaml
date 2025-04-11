@@ -16,3 +16,12 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "Could handlers be configured using attributes ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/blog/new-in-symfony-5-4-messenger-improvements#configurable-handlers-with-php-attributes
+        - https://github.com/symfony/symfony/blob/5.4/src/Symfony/Component/Messenger/Attribute/AsMessageHandler.php
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

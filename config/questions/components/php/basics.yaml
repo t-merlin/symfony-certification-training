@@ -7,9 +7,9 @@
             <?php endforeach ?>
         </ul>
     correction_help:
-        - http://php.net/manual/en/function.range.php
-        - http://php.net/manual/en/function.explode.php
-        - http://php.net/manual/en/function.str-split.php
+        - https://php.net/manual/en/function.range.php
+        - https://php.net/manual/en/function.explode.php
+        - https://php.net/manual/en/function.str-split.php
     answers:
         - {value: "$letters = str_split('ABCDEFGHIJKLMNOPQRSTUVWXYZ');", correct: true}
         - {value: "$letters = explode('', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');", correct: true}
@@ -69,3 +69,30 @@
         - {value: "-1", correct: false}
         - {value: "0", correct: true}
         - {value: "1", correct: false}
+-
+    question: Consider the following PHP code snippet, what will be the outcome of executing this script with any PHP 7 versions ?
+    code_snippet: |
+        <?php
+
+        function foo($x, $x = 1, $x = 2)
+        {
+            return $x;
+        }
+
+        echo foo(1, 2, 3);
+    correction_help:
+        - https://php.net/manual/en/functions.arguments.php
+    answers:
+        - {value: "2", correct: false}
+        - {value: "3", correct: false}
+        - {value: "'x'", correct: false}
+        - {value: "This script will cause a PHP Fatal Error because <info>x</info> cannot be redefined", correct: true}
+-
+    question: "In PHP 7, can a generator contains a <info>return</info> statement ?"
+    code_snippet: ~
+    correction_help:
+        - http://php.net/manual/en/language.generators.syntax.php
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "Yes, but only empty", correct: false}
+        - {value: "No", correct: false}

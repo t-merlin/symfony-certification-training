@@ -1,0 +1,10 @@
+-
+    question: "Which methods are available when using the <info>Symfony\\Component\\VarDumper\\Test\\VarDumperTestTrait</info> ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/2.7/components/var_dumper.html#using-the-vardumper-component-in-your-phpunit-test-suite
+    answers:
+        - {value: "assertDumpEquals", correct: true}
+        - {value: "assertDumpMatchesFormat", correct: true}
+        - {value: "assertDumpSameAs", correct: true}
+        - {value: "assertDumpNotEmpty", correct: true}

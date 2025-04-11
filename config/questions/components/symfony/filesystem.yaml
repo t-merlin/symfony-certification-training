@@ -2,7 +2,7 @@
     question: "Which of the following are Filesystem methods ?"
     code_snippet: ~
     correction_help:
-        - http://symfony.com/doc/current/components/filesystem/introduction.html#usage
+        - https://symfony.com/doc/current/components/filesystem/introduction.html#usage
     answers:
         - {value: "mirror", correct: true}
         - {value: "copy", correct: true}

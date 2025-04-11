@@ -9,6 +9,7 @@
 - 'components/symfony/http_kernel.yaml'
 - 'components/symfony/intl.yaml'
 - 'components/symfony/messenger.yaml'
+- 'components/symfony/options_resolver.yaml'
 - 'components/symfony/process.yaml'
 - 'components/symfony/property_access.yaml'
 - 'components/symfony/routing.yaml'
@@ -17,6 +18,7 @@
 - 'components/symfony/serializer.yaml'
 - 'components/symfony/translation.yaml'
 - 'components/symfony/validator.yaml'
+- 'components/symfony/var_dumper.yaml'
 
 - 'components/php/basics.yaml'
 - 'components/php/data_format_and_types.yaml'

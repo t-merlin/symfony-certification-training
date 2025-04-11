@@ -20,3 +20,14 @@
         - {value: "A <info>MissingMandatoryParametersException</info> will be raised", correct: false}
         - {value: "/blog/", correct: false}
         - {value: "/blog", correct: false}
+-
+    question: "Which exception is thrown when a <info>Route</info> with path <info>/page/{foo}/{foo}</info> cannot be compiled ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/3.2/src/Symfony/Component/Routing/RouteCompiler.php#L39
+    answers:
+        - {value: "InvalidArgumentException", correct: false}
+        - {value: "InvalidRouteCompilationContextException", correct: false}
+        - {value: "RuntimeException", correct: false}
+        - {value: "LogicException", correct: true}
+        - {value: "RouteCompilationException", correct: false}

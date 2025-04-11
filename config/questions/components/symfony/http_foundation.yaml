@@ -1,5 +1,5 @@
 -
-    question: "For a request to <info>http://example.com/blog/index.php/post/hello-world</info>, what will be the value of <info>$pathInfo</info> in the following code ?"
+    question: "For a request to <info>https://example.com/blog/index.php/post/hello-world</info>, what will be the value of <info>$pathInfo</info> in the following code ?"
     code_snippet: "$pathInfo = $request->getPathInfo();"
     correction_help:
         - https://symfony.com/doc/current/components/http_foundation.html#identifying-a-request
@@ -84,3 +84,13 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "What will be the result of invoking the <info>isXmlHttpRequest()</info> method on a <info>Symfony\\Component\\HttpFoundation\\Request</info> object ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/http-foundation/blob/5.3/Request.php#L1763
+    answers:
+        - {value: "<info>true</info> if the request has the <info>X-Requested-With</info> header set to <info>XMLHttpRequest</info>", correct: true}
+        - {value: "<info>true</info> if the request contains XML elements", correct: false}
+        - {value: "<info>true</info> if the request must generate an XML response", correct: false}
+        - {value: "<info>true</info> if the request has the <info>Content-Type</info> header set to <info>application/xml</info>", correct: false}

@@ -41,3 +41,18 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "What are the methods available in <info>Symfony\\Component\\HttpKernel\\Event\\KernelEvent</info> ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/6.0/src/Symfony/Component/HttpKernel/Event/KernelEvent.php
+    answers:
+        - {value: "getResponse", correct: false}
+        - {value: "getKernel", correct: true}
+        - {value: "getRequestType", correct: true}
+        - {value: "isMainRequest", correct: true}
+        - {value: "getException", correct: false}
+        - {value: "hasResponse", correct: false}
+        - {value: "hasRequest", correct: false}
+        - {value: "getKernel", correct: false}
+        - {value: "hasException", correct: false}

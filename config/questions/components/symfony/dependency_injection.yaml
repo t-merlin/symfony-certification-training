@@ -5,7 +5,7 @@
         parameters:
             env_var: '%env(defined:FOO)%'
     correction_help:
-        - http://...
+        - https://...
     answers:
         - {value: "When <info>FOO</info> is an <info>empty string</info>", correct: true}
         - {value: "When <info>FOO</info> equals to <info>\"false\"</info>", correct: false}
@@ -17,7 +17,7 @@
     question: "What is the exact meaning of <info>DIC</info>?"
     code_snippet: ~
     correction_help:
-        - http://...
+        - https://...
     answers:
         - {value: "Dependency Injection Container", correct: true}
         - {value: "Dependencies Injection Component", correct: false}
@@ -128,3 +128,19 @@
         - {value: "<info>null</info> is used", correct: false}
         - {value: "A <info>RuntimeException</info> is thrown", correct: true}
         - {value: "An empty string is used", correct: false}
+-
+    question: "Could custom attributes be registered for autoconfiguring annotated classes ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/5.3/src/Symfony/Component/DependencyInjection/ContainerBuilder.php#L1309
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}
+-
+    question: "Are service ids considered as case-sensitive ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/blog/new-in-symfony-3-3-dependency-injection-deprecations#deprecated-the-case-insensitivity-of-service-identifiers
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

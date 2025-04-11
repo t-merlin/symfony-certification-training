@@ -1,0 +1,11 @@
+-
+    question: "Which of the following are valid types to use in <info>setAllowedTypes</info> method of <info>Symfony\\Component\\OptionsResolver\\OptionsResolver</info> to validate a boolean value ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/3.0/components/options_resolver.html#type-validation
+        - https://symfony.com/doc/3.0/components/options_resolver.html#type-validation
+    answers:
+        - {value: "boolean", correct: true}
+        - {value: "bool", correct: true}
+        - {value: "OptionsResolver::BOOLEAN", correct: false}
+        - {value: "OptionsResolver::BOOL", correct: false}

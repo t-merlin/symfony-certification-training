@@ -28,3 +28,12 @@
         - {value: "200", correct: false}
         - {value: "Nothing", correct: false}
         - {value: "80", correct: false}
+-
+    question: "Could <info>Command</info> be use as a concrete class without defining the <info>execute</info> method ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/2.3/src/Symfony/Component/Console/Command/Command.php#L145
+        - https://github.com/symfony/symfony/blob/2.3/src/Symfony/Component/Console/Command/Command.php#L194
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

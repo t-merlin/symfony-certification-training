@@ -39,3 +39,42 @@
         - {value: "None of those", correct: false}
         - {value: "{{ people|split(', ') }}", correct: false}
         - {value: "{{ people|join(', ') }}", correct: false}
+-
+    question: "Given the case where the opcache/APC cache for template need to be invalidated, is the following code valid ?"
+    code_snippet: |
+        <?php
+
+        // ...
+
+        $twig = new Environment($loader, [
+            'cache' => new FilesystemCache('/some/cache/path', FilesystemCache::FORCE_BYTECODE_INVALIDATION),
+            // ...
+        ]);
+    correction_help:
+        - https://twig.symfony.com/doc/1.x/recipes.html#refreshing-modified-templates-when-opcache-or-apc-is-enabled
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}
+-
+    question: "Given a template where an object <info>Foo</info> is passed and the following call <info>{{ foo.bar }}</info>, what is the first test done by Twig ?"
+    code_snippet: ~
+    correction_help:
+        - https://twig.symfony.com/doc/1.x/templates.html#variables
+    answers:
+        - {value: "If <info>Foo</info> is an object and <info>bar</info> a property", correct: false}
+        - {value: "If <info>Foo</info> is an array and <info>bar</info> a valid element", correct: true}
+        - {value: "If <info>Foo</info> is an object and <info>bar</info> a valid method (or the constructor)", correct: false}
+        - {value: "If <info>Foo</info> is an object and <info>bar</info> is an isser (<info>isBar</info>)", correct: false}
+-
+    question: "Consider the following Twig code snippet, what will be the result of evaluating this Twig template ?"
+    code_snippet: |
+        {% extends 'layout.html.twig' %}
+
+        {% block title 'Hello World!' %}
+
+        My name is Amanda.
+    correction_help:
+        - https://twig.symfony.com/doc/tags/extends.html
+    answers:
+        - {value: "The template is successfully evaluated", correct: false}
+        - {value: "Twig will raise a <info>Twig_Error_Syntax</info> exception and the template will not be evaluated", correct: true}
