@@ -64,3 +64,13 @@
         - {value: "PRE_SUBMIT", correct: true}
         - {value: "SUBMIT", correct: true}
         - {value: "POST_SUBMIT", correct: true}
+-
+    question: "How to get the value set for the field <info>title</info> in a form ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/3.0/reference/forms/twig_reference.html#form-variables-reference
+    answers:
+        - {value: "{{ form.vars.title.value }}", correct: false}
+        - {value: "{{ form.vars.title }}", correct: false}
+        - {value: "{{ form.title.vars.value }}", correct: true}
+        - {value: "{{ form.title }}", correct: false}

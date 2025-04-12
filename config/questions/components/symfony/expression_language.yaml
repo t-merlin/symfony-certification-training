@@ -1,0 +1,22 @@
+-
+    question: "What are the methods of <info>Symfony\\Component\\ExpressionLanguage\\ExpressionFunctionProviderInterface</info> ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/2.6/src/Symfony/Component/ExpressionLanguage/ExpressionFunctionProviderInterface.php
+    answers:
+        - value: |
+              getFunctions();
+              addFunction(ExpressionFunction $function);
+          correct: false
+        - value: |
+              getFunctions();
+          correct: true
+        - value: |
+              getFunctions();
+              register($name, callable $compiler, callable $evaluator);
+              addFunction(ExpressionFunction $function);
+          correct: false
+        - value: |
+              getFunctions();
+              register($name, callable $compiler, callable $evaluator);
+          correct: false

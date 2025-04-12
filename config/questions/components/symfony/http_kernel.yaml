@@ -56,3 +56,13 @@
         - {value: "hasRequest", correct: false}
         - {value: "getKernel", correct: false}
         - {value: "hasException", correct: false}
+-
+    question: "What is the aim of the <info>Symfony\\Component\\HttpKernel\\EventListener\\FragmentListener::onKernelRequest()</info> listener on <info>kernel.request</info> event ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/6.0/src/Symfony/Component/HttpKernel/EventListener/FragmentListener.php
+    answers:
+        - {value: "Handle as content fragments by this listener all URL paths starting with /_fragment", correct: true}
+        - {value: "Handle as content all image, css, javascript that don't require security", correct: false}
+        - {value: "Handle as content all files to let user download them", correct: false}
+        - {value: "Handle as content all image, css, javascript that require security", correct: false}

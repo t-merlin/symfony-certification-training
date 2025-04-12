@@ -1,0 +1,10 @@
+-
+    question: "How to configure the Client provided by the Symfony <info>BrowserKit</info> component to save a Cookie between requests ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/6.0/components/browser_kit#setting-cookies
+    answers:
+        - {value: "Use <info>$client->setCookie(new Cookie(...))</info>", correct: false}
+        - {value: "The Client provided by the Symfony <info>BrowserKit</info> component does not handle cookies", correct: false}
+        - {value: "Use <info>$client->getCookieJar()->set(new Cookie(...))</info>", correct: true}
+        - {value: "Use <info>$client->cookies->set(new Cookie(...))</info>", correct: false}

@@ -144,3 +144,17 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "Is the following code valid ?"
+    code_snippet: |
+        # app/config/config.yaml
+        imports:
+            - { resource: '@Acme/config.yml', ignore_errors: true }
+
+        # ...
+    correction_help:
+        - https://github.com/symfony/symfony/blob/2.0/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php#L81
+        - https://github.com/symfony/symfony/blob/2.0/src/Symfony/Component/Config/Loader/FileLoader.php
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

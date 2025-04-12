@@ -20,3 +20,12 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "Could normalizers/denormalizers be cached to improve performances ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/4.1/components/serializer.html#performance
+        - https://github.com/symfony/symfony/blob/4.1/src/Symfony/Component/Serializer/Normalizer/CacheableSupportsMethodInterface.php
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

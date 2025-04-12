@@ -18,3 +18,16 @@
         - {value: "class Bar extends Foo {}", correct: true}
         - {value: "class Bar childof Foo {}", correct: false}
         - {value: "class Bar inherits Foo {}", correct: false}
+-
+    question: "Considering the following code snippet, is this class definition valid ?"
+    code_snippet: |
+        namespace Application\Exception;
+
+        class Exception extends \Exception
+        {
+        }
+    correction_help:
+        - http://php.net/manual/en/language.namespaces.php
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

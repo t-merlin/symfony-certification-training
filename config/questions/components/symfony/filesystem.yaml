@@ -19,3 +19,21 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "Given the following code snippet, what will be displayed ?"
+    code_snippet: |
+        <?php
+
+        use Symfony\Component\Filesystem\Path;
+
+        echo Path::getRoot("/etc/apache2/sites-available");
+    correction_help:
+        - https://symfony.com/doc/5.4/components/filesystem.html#finding-directories-root-directories
+        - https://github.com/symfony/filesystem/blob/5.4/Path.php#L207
+    answers:
+        - {value: "/", correct: true}
+        - {value: "/etc/apache2/", correct: false}
+        - {value: "/etc/", correct: false}
+        - {value: "/etc", correct: false}
+        - {value: "/etc/apache2", correct: false}
+        - {value: "/etc/apache2/sites-available", correct: false}

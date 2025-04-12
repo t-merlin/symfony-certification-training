@@ -37,3 +37,12 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "Could commands be executed via the messages bus ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/blog/new-in-symfony-6-4-more-built-in-message-handlers#run-command-handler
+        - https://github.com/symfony/symfony/blob/6.4/src/Symfony/Component/Console/Messenger/RunCommandMessage.php
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

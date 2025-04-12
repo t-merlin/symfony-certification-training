@@ -1,0 +1,9 @@
+-
+    question: "Is the following code valid ?"
+    code_snippet: |
+        php bin/console debug:event-dispatcher --dispatcher=security.event_dispatcher.main
+    correction_help:
+        - https://symfony.com/doc/5.3/event_dispatcher.html#debugging-event-listeners
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

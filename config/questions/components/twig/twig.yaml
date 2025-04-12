@@ -78,3 +78,27 @@
     answers:
         - {value: "The template is successfully evaluated", correct: false}
         - {value: "Twig will raise a <info>Twig_Error_Syntax</info> exception and the template will not be evaluated", correct: true}
+-
+    question: "Which syntax is valid to avoid escaping ?"
+    code_snippet: ~
+    correction_help:
+        - https://twig.symfony.com/doc/1.x/filters/escape.html
+    answers:
+        - {value: "{{ hello|no_escape }}", correct: false}
+        - {value: "{{ hello|raw }}", correct: true}
+        - {value: "{{ hello }}", correct: false}
+        - {value: "{{ hello|escape('no') }}", correct: false}
+-
+    question: "Considering the following Twig code snippet, what will be the result of evaluating this template without passing it the <info>color</info> variable when the <info>strict_variables</info> global setting is off ?"
+    code_snippet: |
+        The {{ color }} car!
+    correction_help:
+        - https://twig.symfony.com/doc/1.x/templates.html#variables
+        - https://twig.symfony.com/doc/2.x/templates.html#variables
+        - https://twig.symfony.com/doc/2.x/api.html#environment-options
+        - https://github.com/twigphp/Twig/blob/1.x/lib/Twig/Extension/Core.php#L1447-L1479
+    answers:
+        - {value: "The template will be partially evaluated and the string <info>The</info> will be displayed in the web browser", correct: false}
+        - {value: "The template will be successfully evaluated and the string <info>The empty car!</info> will be displayed in the web browser", correct: false}
+        - {value: "Twig will raise a <info>Twig_Error_Runtime</info> exception preventing the template from being evaluated", correct: false}
+        - {value: "The template will be partially evaluated and the string <info>The car!</info> will be displayed in the web browser", correct: true}

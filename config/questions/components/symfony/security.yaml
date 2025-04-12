@@ -18,3 +18,23 @@
         - {value: "Symfony\\Component\\Security\\Http\\Firewall\\SecurityListener", correct: false}
         - {value: "Symfony\\Component\\Security\\Http\\Firewall\\ExceptionListener", correct: true}
         - {value: "Symfony\\Component\\Security\\Http\\Firewall\\AuthenticationListener", correct: false}
+-
+    question: "Which sentences are true about user checkers ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/2.8/security/user_checkers.html
+    answers:
+        - {value: "User checkers must implement a <info>preCheck</info> method", correct: false}
+        - {value: "User checker methods throw an exception when requirements are not fulfilled", correct: true}
+        - {value: "User checkers must implement a <info>preAuth</info> method", correct: false}
+        - {value: "User checkers must implement a <info>check</info> method", correct: false}
+        - {value: "User checker methods returns false when requirements are not fulfilled", correct: false}
+        - {value: "User checkers must implement a <info>checkPreAuth</info> method", correct: true}
+-
+    question: "When configuring the main firewall of an application, could its <info>check_path</info> route be covered by another firewall ?"
+    code_snippet: ~
+    correction_help:
+        - http://symfony.com/doc/current/reference/configuration/security.html#check-path
+    answers:
+        - {value: "Yes", correct: false}
+        - {value: "No", correct: true}

@@ -96,3 +96,11 @@
         - {value: "Yes", correct: true}
         - {value: "Yes, but only empty", correct: false}
         - {value: "No", correct: false}
+-
+    question: "Can interfaces inherit from other interfaces in PHP ?"
+    code_snippet: ~
+    correction_help:
+        - http://php.net/interfaces
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}
