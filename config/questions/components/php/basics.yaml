@@ -66,9 +66,9 @@
         - https://www.php.net/manual/en/language.operators.comparison.php
         - https://www.php.net/manual/en/types.comparisons.php
     answers:
-        - {value: "-1", correct: false}
-        - {value: "0", correct: true}
-        - {value: "1", correct: false}
+        - {value: "The integer <info>-1</info>", correct: false}
+        - {value: "The integer <info>0</info>", correct: true}
+        - {value: "The integer <info>1</info>", correct: false}
 -
     question: Consider the following PHP code snippet, what will be the outcome of executing this script with any PHP 7 versions ?
     code_snippet: |
@@ -83,8 +83,8 @@
     correction_help:
         - https://php.net/manual/en/functions.arguments.php
     answers:
-        - {value: "2", correct: false}
-        - {value: "3", correct: false}
+        - {value: "The integer : 2", correct: false}
+        - {value: "The integer : 3", correct: false}
         - {value: "'x'", correct: false}
         - {value: "This script will cause a PHP Fatal Error because <info>x</info> cannot be redefined", correct: true}
 -
@@ -104,3 +104,14 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "Which syntax is not a valid callable syntax ?"
+    code_snippet: ~
+    correction_help:
+        - http://php.net/manual/en/language.types.callable.php
+    answers:
+        - {value: "Foo::bar", correct: false}
+        - {value: "foo->bar", correct: true}
+        - {value: "['foo', 'bar']", correct: false}
+        - {value: "function () {}", correct: false}
+        - {value: "foo", correct: false}

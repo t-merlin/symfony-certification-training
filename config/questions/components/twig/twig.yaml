@@ -102,3 +102,23 @@
         - {value: "The template will be successfully evaluated and the string <info>The empty car!</info> will be displayed in the web browser", correct: false}
         - {value: "Twig will raise a <info>Twig_Error_Runtime</info> exception preventing the template from being evaluated", correct: false}
         - {value: "The template will be partially evaluated and the string <info>The car!</info> will be displayed in the web browser", correct: true}
+-
+    question: "What is the correct value to display the value of a PHP constant in Twig ?"
+    code_snippet: ~
+    correction_help:
+        - http://twig.symfony.com/doc/functions/constant.html
+    answers:
+        - {value: "{{ Namespace\\ClassName::CONSTANT_NAME }}", correct: false}
+        - {value: "{{ constant(Namespace\\ClassName::CONSTANT_NAME) }}", correct: false}
+        - {value: "{{ constant(Namespace\\\\ClassName::CONSTANT_NAME }}", correct: true}
+        - {value: "{{ Namespace\\\\ClassName::CONSTANT_NAME }}", correct: false}
+-
+    question: "When writing a <info>Twig_Test</info>, what is a <info>node_class</info> for ?"
+    code_snippet: ~
+    correction_help:
+        - https://twig.symfony.com/doc/2.x/advanced.html#tests
+    answers:
+        - {value: "The given test will use a semantic validation in addition to the basic evaluation", correct: false}
+        - {value: "The given test will be compiled into PHP primitives", correct: true}
+        - {value: "The <info>node_class</info> is a mandatory option to get defined in a <info>Twig_Environment</info>", correct: false}
+        - {value: "The given test will rely on a custom <info>Twig_NodeVisitorInterface</info>", correct: false}

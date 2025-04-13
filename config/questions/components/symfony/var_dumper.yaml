@@ -6,5 +6,5 @@
     answers:
         - {value: "assertDumpEquals", correct: true}
         - {value: "assertDumpMatchesFormat", correct: true}
-        - {value: "assertDumpSameAs", correct: true}
-        - {value: "assertDumpNotEmpty", correct: true}
+        - {value: "assertDumpSameAs", correct: false}
+        - {value: "assertDumpNotEmpty", correct: false}

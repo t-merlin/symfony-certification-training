@@ -7,3 +7,11 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "Could the event listeners related to an event be retrieved from the <info>ImmutableEventDispatcher</info> ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/2.1/src/Symfony/Component/EventDispatcher/ImmutableEventDispatcher.php
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

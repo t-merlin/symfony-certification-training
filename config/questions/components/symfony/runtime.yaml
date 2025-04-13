@@ -6,3 +6,11 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "Is it possible disable looking for <info>.env</info> files ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/5.3/components/runtime.html#using-options
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

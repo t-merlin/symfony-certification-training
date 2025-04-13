@@ -5,4 +5,4 @@
         - https://symfony.com/blog/new-in-symfony-5-4-misc-features-part-2#new-command-to-debug-environment-variables
     answers:
         - {value: "Yes", correct: true}
-        - {value: "Np", correct: false}
+        - {value: "No", correct: false}

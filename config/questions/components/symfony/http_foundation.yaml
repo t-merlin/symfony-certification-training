@@ -94,3 +94,14 @@
         - {value: "<info>true</info> if the request contains XML elements", correct: false}
         - {value: "<info>true</info> if the request must generate an XML response", correct: false}
         - {value: "<info>true</info> if the request has the <info>Content-Type</info> header set to <info>application/xml</info>", correct: false}
+-
+    question: "How to access the <info>$_COOKIES</info> from the <info>Symfony\\Component\\HttpFoundation\\Request $request</info> object ?"
+    code_snippet: ~
+    correction_help:
+        - http://symfony.com/doc/current/components/http_foundation.html#accessing-request-data
+    answers:
+        - {value: "$request->cookies", correct: true}
+        - {value: "$request->cookie", correct: false}
+        - {value: "$request->getCookies()", correct: false}
+        - {value: "$request->getCookie()", correct: false}
+        - {value: "$request->getCookieData()", correct: false}

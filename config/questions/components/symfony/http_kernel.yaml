@@ -8,29 +8,29 @@
                 1. kernel.request
                 2. kernel.view
                 3. kernel.controller
-                2. kernel.response
-                2. kernel.terminate
+                4. kernel.response
+                5. kernel.terminate
           correct: false
         - value: |
                 1. kernel.request
                 2. kernel.view
                 3. kernel.controller
-                2. kernel.terminate
-                2. kernel.response
+                4. kernel.terminate
+                5. kernel.response
           correct: false
         - value: |
                 1. kernel.request
                 2. kernel.controller
                 3. kernel.view
-                2. kernel.response
-                2. kernel.terminate
+                4. kernel.response
+                5. kernel.terminate
           correct: true
         - value: |
                 1. kernel.request
                 2. kernel.controller
                 3. kernel.view
-                2. kernel.terminate
-                2. kernel.response
+                4. kernel.terminate
+                5. kernel.response
           correct: false
 -
     question: "Could the build directory be overriden ?"
@@ -54,7 +54,7 @@
         - {value: "getException", correct: false}
         - {value: "hasResponse", correct: false}
         - {value: "hasRequest", correct: false}
-        - {value: "getKernel", correct: false}
+        - {value: "getRequest", correct: true}
         - {value: "hasException", correct: false}
 -
     question: "What is the aim of the <info>Symfony\\Component\\HttpKernel\\EventListener\\FragmentListener::onKernelRequest()</info> listener on <info>kernel.request</info> event ?"
@@ -66,3 +66,13 @@
         - {value: "Handle as content all image, css, javascript that don't require security", correct: false}
         - {value: "Handle as content all files to let user download them", correct: false}
         - {value: "Handle as content all image, css, javascript that require security", correct: false}
+-
+    question: "What is the name of the special request attribute used by the <info>RouterListener</info> object to know which callable to invoke through the <info>HttpKernel</info> engine ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/2.8/components/http_kernel.html#1-the-kernel-request-event
+    answers:
+        - {value: "_action", correct: false}
+        - {value: "_controller", correct: true}
+        - {value: "_request", correct: false}
+        - {value: "_route", correct: false}

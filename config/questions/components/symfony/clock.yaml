@@ -1,0 +1,10 @@
+-
+    question: "What is the name of the main interface defined in the <info>Clock</info> component ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/clock/blob/6.2/ClockInterface.php
+    answers:
+        - {value: "ClockDateTimeInterface", correct: false}
+        - {value: "ClockDateTimeZoneInterface", correct: false}
+        - {value: "ClockInterface", correct: true }
+        - {value: "ClockTimeZoneInterface", correct: false}

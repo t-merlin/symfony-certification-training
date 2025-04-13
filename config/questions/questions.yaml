@@ -1,8 +1,10 @@
 - 'components/symfony/browser_kit.yaml'
 - 'components/symfony/cache.yaml'
+- 'components/symfony/clock.yaml'
 - 'components/symfony/config.yaml'
 - 'components/symfony/console.yaml'
 - 'components/symfony/dependency_injection.yaml'
+- 'components/symfony/dom_crawler.yaml'
 - 'components/symfony/dotenv.yaml'
 - 'components/symfony/event_dispatcher.yaml'
 - 'components/symfony/expression_language.yaml'
@@ -27,5 +29,6 @@
 - 'components/php/basics.yaml'
 - 'components/php/data_format_and_types.yaml'
 - 'components/php/object_oriented_programming.yaml'
+- 'components/php/psr.yaml'
 
 - 'components/twig/twig.yaml'

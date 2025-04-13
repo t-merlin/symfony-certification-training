@@ -25,10 +25,10 @@
                   ->getFormFactory();
           correct: false
 -
-    question: "Is <info>Symfony\\Component\\Form\\Form::isValid()<info> the method responsible for validating its data ?"
+    question: "Is <info>Symfony\\Component\\Form\\Form::isValid()</info> the method responsible for validating its data ?"
     code_snippet: ~
     correction_help:
-        - "<info>ValidationListener</info> actually do the job"
+        - "ValidationListener actually do the job"
         - https://github.com/symfony/symfony/blob/0baa58d4e4bb006c4ae68f75833b586bd3cb6e6f/src/Symfony/Component/Form/Form.php#L744
         - https://github.com/symfony/symfony/blob/2.3/src/Symfony/Component/Form/Extension/Validator/EventListener/ValidationListener.php
     answers:
@@ -74,3 +74,11 @@
         - {value: "{{ form.vars.title }}", correct: false}
         - {value: "{{ form.title.vars.value }}", correct: true}
         - {value: "{{ form.title }}", correct: false}
+-
+    question: "Is there a way to make sure the <info>{{ form_end(form) }}</info> does not render the fields who have not been rendered previously ?"
+    code_snippet: ~
+    correction_help:
+        - http://symfony.com/doc/current/reference/forms/twig_reference.html#form-end-view-variables
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

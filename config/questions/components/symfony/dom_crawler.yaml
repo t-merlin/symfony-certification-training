@@ -1,0 +1,12 @@
+-
+    question: "Which DomCrawler methods allow to deal with XPath expressions ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/3.2/components/dom_crawler.html
+    answers:
+        - {value: "filter", correct: false}
+        - {value: "find", correct: false}
+        - {value: "filterXPath", correct: true}
+        - {value: "evaluateXPath", correct: false}
+        - {value: "findXPath", correct: false}
+        - {value: "evaluate", correct: true}

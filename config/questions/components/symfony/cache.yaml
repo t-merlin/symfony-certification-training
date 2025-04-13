@@ -12,3 +12,35 @@
         - {value: "$cache->deleteItem('some_item');", correct: true}
         - {value: "$cache->remove('some_item');", correct: false}
         - {value: "$cache->removeItem('some_item');", correct: false}
+-
+    question: "Consdering the following code, how would you check if an item already exists in the cache ?"
+    code_snippet: |
+        use Symfony\Component\Cache\Adapter\FilesystemAdapter;
+
+        $cache = new FilesystemAdapter();
+
+        // retrieve the cache item
+        $numProducts = $cache->getItem('stats.num_products');
+    correction_help:
+        - https://symfony.com/doc/current/components/cache.html#basic-usage-psr-6
+    answers:
+        - value: |
+              if (!$numProducts->exists()) {
+                  // ... item does not exists in the cache
+              }
+          correct: false
+        - value: |
+              if (!$numProducts->isFound()) {
+                  // ... item does not exists in the cache
+              }
+          correct: false
+        - value: |
+              if (!$numProducts->isCached()) {
+                  // ... item does not exists in the cache
+              }
+          correct: false
+        - value: |
+              if (!$numProducts->isHit()) {
+                  // ... item does not exists in the cache
+              }
+          correct: true

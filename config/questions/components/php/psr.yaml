@@ -1,0 +1,14 @@
+-
+    question: "What PSRs correspond to autoloading standards ?"
+    code_snippet: ~
+    correction_help:
+        - http://www.php-fig.org/psr/
+    answers:
+        - {value: "PSR-0", correct: true}
+        - {value: "PSR-1", correct: false}
+        - {value: "PSR-2", correct: false}
+        - {value: "PSR-3", correct: false}
+        - {value: "PSR-4", correct: true}
+        - {value: "PSR-5", correct: false}
+        - {value: "PSR-6", correct: false}
+        - {value: "PSR-7", correct: false}

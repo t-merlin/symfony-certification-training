@@ -29,3 +29,13 @@
         - {value: "Public properties", correct: true}
         - {value: "Private properties", correct: true}
         - {value: "Protected properties", correct: true}
+-
+    question: "How can you inverse the result of the validation when using <info>Regex</info> validation constraint ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/2.3/reference/constraints/Regex.html
+    answers:
+        - {value: "Using the <info>match</info> option", correct: true}
+        - {value: "Using the <info>prune</info> option", correct: false}
+        - {value: "Using the <info>inverse</info> option", correct: false}
+        - {value: "Using the <info>not</info> option", correct: false}

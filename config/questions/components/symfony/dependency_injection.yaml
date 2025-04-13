@@ -158,3 +158,47 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "Is the following code valid when decorating a service ?"
+    code_snippet: |
+        <?php
+
+        namespace Symfony\Component\DependencyInjection\Loader\Configurator;
+
+        use App\DecoratingMailer;
+        use App\Mailer;
+
+        return function(ContainerConfigurator $configurator): void {
+          $services = $configurator->services();
+
+          $services->set(Mailer::class);
+
+          $services->set(DecoratingMailer::class)
+              ->decorate(Mailer::class)
+              ->args([service('.inner')])
+          ;
+        };
+    correction_help:
+        - https://symfony.com/doc/5.1/service_container/service_decoration.html
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}
+-
+    question: "Is the following code valid when decorating a service ?"
+    code_snippet: |
+        <?php
+
+        namespace App\Mailer;
+
+        use Symfony\Component\DependencyInjection\Attribute\AsDecorator;
+
+        #[AsDecorator(decorates: Mailer::class)]
+        class LoggingMailer
+        {
+            // ...
+        }
+    correction_help:
+        - https://symfony.com/blog/new-in-symfony-6-1-service-decoration-attributes
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}
