@@ -27,7 +27,7 @@
     question: "Is the <info>__call</info> feature enabled by default ?"
     code_snippet: ~
     correction_help:
-        - http://symfony.com/doc/current/components/property_access/introduction.html#magic-call-method
+        - https://symfony.com/doc/current/components/property_access/introduction.html#magic-call-method
     answers:
         - {value: "Yes", correct: false}
         - {value: "No", correct: true}

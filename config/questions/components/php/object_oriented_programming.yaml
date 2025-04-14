@@ -27,7 +27,7 @@
         {
         }
     correction_help:
-        - http://php.net/manual/en/language.namespaces.php
+        - https://php.net/manual/en/language.namespaces.php
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}

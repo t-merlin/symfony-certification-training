@@ -34,7 +34,7 @@
     question: "When configuring the main firewall of an application, could its <info>check_path</info> route be covered by another firewall ?"
     code_snippet: ~
     correction_help:
-        - http://symfony.com/doc/current/reference/configuration/security.html#check-path
+        - https://symfony.com/doc/current/reference/configuration/security.html#check-path
     answers:
         - {value: "Yes", correct: false}
         - {value: "No", correct: true}

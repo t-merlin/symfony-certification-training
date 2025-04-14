@@ -4,7 +4,7 @@
         // ...
 
         /** @var Symfony\Contracts\HttpClient\HttpClientInterface $client */
-        $response = $client->request('GET', 'http://releases.ubuntu.com/18.04.2/ubuntu-18.04.2-desktop-amd64.iso');
+        $response = $client->request('GET', 'https://releases.ubuntu.com/18.04.2/ubuntu-18.04.2-desktop-amd64.iso');
 
         $this->onDownloadComplete($response);
 

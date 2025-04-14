@@ -28,7 +28,7 @@
     question: "What happens if two listeners have the same priority ?"
     code_snippet: ~
     correction_help:
-        - http://symfony.com/doc/2.3/components/event_dispatcher/introduction.html#connecting-listeners
+        - https://symfony.com/doc/2.3/components/event_dispatcher/introduction.html#connecting-listeners
     answers:
         - {value: "They are executed in the alphanumeric order", correct: false}
         - {value: "A <info>InvalidPriorityException</info> is thrown", correct: false}

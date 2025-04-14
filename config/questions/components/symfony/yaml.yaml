@@ -7,7 +7,7 @@
 
         $value = Yaml::parse(file_get_contents('/path/to/file.yml'));
     correction_help:
-        - http://symfony.com/doc/current/components/yaml/introduction.html#reading-yaml-files
+        - https://symfony.com/doc/current/components/yaml/introduction.html#reading-yaml-files
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}

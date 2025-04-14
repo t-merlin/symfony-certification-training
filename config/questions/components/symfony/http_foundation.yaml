@@ -98,7 +98,7 @@
     question: "How to access the <info>$_COOKIES</info> from the <info>Symfony\\Component\\HttpFoundation\\Request $request</info> object ?"
     code_snippet: ~
     correction_help:
-        - http://symfony.com/doc/current/components/http_foundation.html#accessing-request-data
+        - https://symfony.com/doc/current/components/http_foundation.html#accessing-request-data
     answers:
         - {value: "$request->cookies", correct: true}
         - {value: "$request->cookie", correct: false}

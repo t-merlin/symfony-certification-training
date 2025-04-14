@@ -78,7 +78,7 @@
     question: "Is there a way to make sure the <info>{{ form_end(form) }}</info> does not render the fields who have not been rendered previously ?"
     code_snippet: ~
     correction_help:
-        - http://symfony.com/doc/current/reference/forms/twig_reference.html#form-end-view-variables
+        - https://symfony.com/doc/current/reference/forms/twig_reference.html#form-end-view-variables
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}

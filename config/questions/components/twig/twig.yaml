@@ -106,7 +106,7 @@
     question: "What is the correct value to display the value of a PHP constant in Twig ?"
     code_snippet: ~
     correction_help:
-        - http://twig.symfony.com/doc/functions/constant.html
+        - https://twig.symfony.com/doc/functions/constant.html
     answers:
         - {value: "{{ Namespace\\ClassName::CONSTANT_NAME }}", correct: false}
         - {value: "{{ constant(Namespace\\ClassName::CONSTANT_NAME) }}", correct: false}
@@ -126,7 +126,7 @@
     question: "Which of the following is not a supported Twig tag ?"
     code_snippet: ~
     correction_help:
-        - http://twig.symfony.com/documentation
+        - https://twig.symfony.com/documentation
     answers:
         - {value: "while", correct: true}
         - {value: "include", correct: false}
