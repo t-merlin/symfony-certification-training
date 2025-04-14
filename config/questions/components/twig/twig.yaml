@@ -122,3 +122,24 @@
         - {value: "The given test will be compiled into PHP primitives", correct: true}
         - {value: "The <info>node_class</info> is a mandatory option to get defined in a <info>Twig_Environment</info>", correct: false}
         - {value: "The given test will rely on a custom <info>Twig_NodeVisitorInterface</info>", correct: false}
+-
+    question: "Which of the following is not a supported Twig tag ?"
+    code_snippet: ~
+    correction_help:
+        - http://twig.symfony.com/documentation
+    answers:
+        - {value: "while", correct: true}
+        - {value: "include", correct: false}
+        - {value: "for", correct: false}
+        - {value: "do", correct: false}
+        - {value: "embed", correct: false}
+-
+    question: "Which of the following operators has the lowest precedence ?"
+    code_snippet: ~
+    correction_help:
+        - https://twig.symfony.com/doc/3.x/templates.html#expressions
+    answers:
+        - {value: "and", correct: true}
+        - {value: "!=", correct: true}
+        - {value: ">=", correct: true}
+        - {value: "==", correct: true}

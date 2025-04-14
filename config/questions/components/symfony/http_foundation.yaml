@@ -105,3 +105,23 @@
         - {value: "$request->getCookies()", correct: false}
         - {value: "$request->getCookie()", correct: false}
         - {value: "$request->getCookieData()", correct: false}
+-
+    question: "Which method can be used to add a new value into <info>Session</info> ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/2.1/src/Symfony/Component/HttpFoundation/Session/Session.php#L93
+    answers:
+        - {value: "$session->insert()", correct: false}
+        - {value: "$session->add()", correct: false}
+        - {value: "$session->append()", correct: false}
+        - {value: "$session->init()", correct: false}
+        - {value: "$session->set()", correct: true}
+-
+    question: "Since <info>Symfony 6.0</info>, can a Response be created with <info>Response::create()</info> ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/5.4/src/Symfony/Component/HttpFoundation/Response.php#L223
+        - https://github.com/symfony/symfony/blob/6.0/src/Symfony/Component/HttpFoundation/Response.php
+    answers:
+        - {value: "Yes", correct: false}
+        - {value: "No", correct: true}

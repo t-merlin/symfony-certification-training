@@ -1,0 +1,8 @@
+-
+    question: "Given a lock set to be released after 60 seconds, is there any way to refresh this TTL ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/3.4/components/lock.html#expiring-locks
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

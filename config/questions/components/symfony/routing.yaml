@@ -31,3 +31,34 @@
         - {value: "RuntimeException", correct: false}
         - {value: "LogicException", correct: true}
         - {value: "RouteCompilationException", correct: false}
+-
+    question: "Given the following route configuration, does the path <info>/blog/articles?page=1</info> can display the page without error ?"
+    code_snippet: |
+        // src/Controller/BlogController.php
+        namespace App\Controller;
+
+        use Symfony\Component\Routing\Annotation\Route;
+
+        class BlogController
+        {
+            /**
+             * @Route("/blog/articles", name="blog_articles")
+             */
+            public function listArticles(int $page)
+            {
+              // ...
+            }
+        }
+    correction_help:
+        - https://symfony.com/doc/2.7/routing.html
+    answers:
+        - {value: "Yes", correct: false}
+        - {value: "No", correct: true}
+-
+    question: "Could a <info>Route</info> defined with <info>/page/{2foo}</info> path be compiled ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/3.2/src/Symfony/Component/Routing/RouteCompiler.php#L39
+    answers:
+        - {value: "Yes", correct: false}
+        - {value: "No", correct: true}

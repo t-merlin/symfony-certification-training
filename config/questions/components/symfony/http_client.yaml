@@ -1,0 +1,21 @@
+-
+    question: "Given the following code snippet, is the <info>onDownloadComplete</info> method guaranteed to be called when the <info>.iso</info> file had been downloaded completely ?"
+    code_snippet: |
+        // ...
+
+        /** @var Symfony\Contracts\HttpClient\HttpClientInterface $client */
+        $response = $client->request('GET', 'http://releases.ubuntu.com/18.04.2/ubuntu-18.04.2-desktop-amd64.iso');
+
+        $this->onDownloadComplete($response);
+
+        // ...
+
+        public function onDownloadComplete(Response $response): void
+        {
+            $this->logger->info('Download completed.');
+        }
+    correction_help:
+        - https://symfony.com/doc/6.0/http_client.html#making-requests
+    answers:
+        - {value: "Yes", correct: false}
+        - {value: "No", correct: true}

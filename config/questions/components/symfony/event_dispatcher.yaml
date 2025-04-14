@@ -15,3 +15,21 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "Is the following code valid ?"
+    code_snippet: |
+        php bin/console debug:event-dispatcher Security
+    correction_help:
+        - https://symfony.com/doc/5.3/event_dispatcher.html#debugging-event-listeners
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}
+-
+    question: "What happens if two listeners have the same priority ?"
+    code_snippet: ~
+    correction_help:
+        - http://symfony.com/doc/2.3/components/event_dispatcher/introduction.html#connecting-listeners
+    answers:
+        - {value: "They are executed in the alphanumeric order", correct: false}
+        - {value: "A <info>InvalidPriorityException</info> is thrown", correct: false}
+        - {value: "They are executed in the order they have been added to the dispatcher", correct: true}

@@ -1,0 +1,15 @@
+-
+    question: "What is the output of the following code ?"
+    code_snippet: |
+        <?php
+
+        $array = [1.1 => '1', 1.2 => '1'];
+
+        echo count($array);
+    correction_help:
+        - https://www.php.net/manual/en/language.types.array.php
+    answers:
+        - {value: "The integer <info>0</info>", correct: false}
+        - {value: "The integer <info>1</info>", correct: true}
+        - {value: "The integer <info>2</info>", correct: false}
+        - {value: "The integer <info>4</info>", correct: false}

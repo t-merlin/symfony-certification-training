@@ -14,3 +14,11 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "Could a custom runtime be created ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/2.7/routing.html
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

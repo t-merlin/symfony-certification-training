@@ -22,12 +22,12 @@
         - https://github.com/symfony/symfony/blob/3.2/src/Symfony/Component/Console/Terminal.php
     answers:
         - {value: "An error", correct: false}
-        - {value: "0", correct: false}
-        - {value: "120", correct: true}
+        - {value: "The integer <info>0</info>", correct: false}
+        - {value: "The integer <info>120</info>", correct: true}
         - {value: "The width of the actual terminal if used in the context of a terminal", correct: false}
-        - {value: "200", correct: false}
+        - {value: "The integer <info>200</info>", correct: false}
         - {value: "Nothing", correct: false}
-        - {value: "80", correct: false}
+        - {value: "The integer <info>80</info>", correct: false}
 -
     question: "Could <info>Command</info> be use as a concrete class without defining the <info>execute</info> method ?"
     code_snippet: ~
@@ -46,3 +46,15 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "What is the return type of the <info>Symfony\\Component\\Console\\Command::execute</info> method ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/6.0/console.html#creating-a-command
+        - https://github.com/symfony/symfony/blob/6.0/src/Symfony/Component/Console/Command/Command.php#L293-L295
+    answers:
+        - {value: "?bool", correct: false}
+        - {value: "?int", correct: false}
+        - {value: "int", correct: true}
+        - {value: "bool", correct: false}
+        - {value: "void", correct: false}

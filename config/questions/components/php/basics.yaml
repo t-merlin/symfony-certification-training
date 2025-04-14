@@ -48,10 +48,10 @@
     correction_help:
         - https://php.net/manual/en/function.explode.php
     answers:
-        - {value: "4", correct: true}
-        - {value: "3", correct: false}
-        - {value: "2", correct: false}
-        - {value: "0", correct: false}
+        - {value: "The integer <info>4</info>", correct: true}
+        - {value: "The integer <info>3</info>", correct: false}
+        - {value: "The integer <info>2</info>", correct: false}
+        - {value: "The integer <info>0</info>", correct: false}
         - {value: "An error", correct: false}
 -
     question: "Given the following code, what will be displayed ?"
@@ -115,3 +115,11 @@
         - {value: "['foo', 'bar']", correct: false}
         - {value: "function () {}", correct: false}
         - {value: "foo", correct: false}
+-
+    question: "What are the best approaches to compare two strings in a binary safe fashion ?"
+    code_snippet: ~
+    correction_help:
+        - http://www.php.net/strings
+        - http://php.net/manual/fr/function.strcmp.php
+        - http://php.net/manual/en/language.operators.comparison.php
+        - http://php.net/manual/fr/function.strstr.php

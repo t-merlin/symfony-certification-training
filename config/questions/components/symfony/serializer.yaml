@@ -29,3 +29,11 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "Is it possible to specify the serialization context in an attribute/annotation ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/blog/new-in-symfony-5-3-inlined-serialization-context
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}
