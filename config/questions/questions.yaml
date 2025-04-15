@@ -20,6 +20,7 @@
 - 'components/symfony/password_hasher.yaml'
 - 'components/symfony/process.yaml'
 - 'components/symfony/property_access.yaml'
+- 'components/symfony/property_info.yaml'
 - 'components/symfony/routing.yaml'
 - 'components/symfony/runtime.yaml'
 - 'components/symfony/security.yaml'
@@ -27,6 +28,7 @@
 - 'components/symfony/translation.yaml'
 - 'components/symfony/validator.yaml'
 - 'components/symfony/var_dumper.yaml'
+- 'components/symfony/var_exporter.yaml'
 - 'components/symfony/yaml.yaml'
 
 - 'components/php/arrays.yaml'

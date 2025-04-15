@@ -125,3 +125,24 @@
     answers:
         - {value: "Yes", correct: false}
         - {value: "No", correct: true}
+-
+    question: "Given a sensitive application with restrictive rules on cookies usage, which cookie strategy is recommended ?"
+    code_snippet: ~
+    correction_help:
+        - https://github.com/symfony/symfony/blob/5.3/src/Symfony/Component/PasswordHasher/PasswordHasherInterface.php
+        - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
+    answers:
+        - {value: "<info>Cookie:SAMESITE_NONE</info>", correct: false}
+        - {value: "<info>Cookie:SAMESITE_LAX</info>", correct: false}
+        - {value: "<info>Cookie:SAMESITE_STRICT</info>", correct: true}
+        - {value: "<info>Cookie:SAMESITE_SAME_ORIGIN</info>", correct: false}
+-
+    question: "Is it possible to create a <info>RedirectResponse</info> with the <info>201</info> status code ?"
+    code_snippet: ~
+    correction_help:
+        - https://tools.ietf.org/html/rfc7231#section-6.3.2
+        - https://github.com/symfony/symfony/blob/2c14c5fca7182f11abf0a692e471326f14119c29/src/Symfony/Component/HttpFoundation/RedirectResponse.php#L41
+        - https://github.com/symfony/symfony/blob/2c14c5fca7182f11abf0a692e471326f14119c29/src/Symfony/Component/HttpFoundation/Response.php#L1177
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

@@ -143,3 +143,25 @@
         - {value: "!=", correct: true}
         - {value: ">=", correct: true}
         - {value: "==", correct: true}
+-
+    question: "Which of the following Twig internal objects is responsible for transforming AST (Abstract Syntax Tree) into PHP code ?"
+    code_snippet: ~
+    correction_help:
+        - http://twig.symfony.com/doc/internals.html
+    answers:
+        - {value: "The Lexer", correct: false}
+        - {value: "The Parser", correct: false}
+        - {value: "The Environment", correct: false}
+        - {value: "The Compiler", correct: true}
+-
+    question: "Which is a valid statement to concatenate two strings in Twig ?"
+    code_snippet: ~
+    correction_help:
+        - https://twig.symfony.com/doc/3.x/templates.html
+    answers:
+        - {value: "{% concatenated = 'foo' ~ 'bar' %}", correct: false}
+        - {value: "{% concatenated = 'foo' + 'bar' %}", correct: false}
+        - {value: "{% set concatenated = 'foo' + 'bar' %}", correct: false}
+        - {value: "{% set concatenated = 'foo'.'bar' %}", correct: false}
+        - {value: "{% set concatenated = 'foo' ~ 'bar' %}", correct: true}
+        - {value: "{% concatenated = 'foo'.'bar' %}", correct: false}

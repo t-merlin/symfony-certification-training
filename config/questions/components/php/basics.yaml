@@ -123,3 +123,13 @@
         - https://php.net/manual/fr/function.strcmp.php
         - https://php.net/manual/en/language.operators.comparison.php
         - https://php.net/manual/fr/function.strstr.php
+-
+    question: "In which year PHP has been released for the first time ?"
+    code_snippet: ~
+    correction_help:
+        - http://php.net/manual/en/history.php.php
+    answers:
+        - {value: "1987", correct: false}
+        - {value: "1995", correct: true}
+        - {value: "2001", correct: false}
+        - {value: "2005", correct: false}

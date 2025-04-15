@@ -39,3 +39,34 @@
         - {value: "Using the <info>prune</info> option", correct: false}
         - {value: "Using the <info>inverse</info> option", correct: false}
         - {value: "Using the <info>not</info> option", correct: false}
+-
+    question: "Which of the following values will not trigger a <info>Blank</info> violation constraint ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/2.7/reference/constraints/Blank.html
+    answers:
+        - {value: "<info>false</info>", correct: false}
+        - {value: "<info>[]</info>", correct: false}
+        - {value: "<info>null</info>", correct: true}
+        - {value: "<info>''</info>", correct: true}
+-
+    question: "Will the following code trigger a <info>InvalidArgumentException</info> ?"
+    code_snippet: |
+        <?php
+
+        use Symfony\Component\Validator\Validation;
+        use Symfony\Component\Validator\Constraints\Ip;
+
+        $ip = "2607:f0d0:1002:51::4"; // This is a valid IPv6 address
+
+        $validator = Validation::createValidator();
+        $violations = $validator->validate($ip, [new Ip()]);
+
+        if (0 !== count($violations)) {
+            throw new InvalidArgumentException();
+        }
+    correction_help:
+        - https://symfony.com/doc/current/reference/constraints/Ip.html#version
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

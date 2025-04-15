@@ -37,3 +37,13 @@
         - {value: "/etc", correct: false}
         - {value: "/etc/apache2", correct: false}
         - {value: "/etc/apache2/sites-available", correct: false}
+-
+    question: "Which method can be used to copy a whole directory to a new one ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/2.1/components/filesystem.html#mirror
+    answers:
+        - {value: "It's not possible", correct: false}
+        - {value: "<info>mirror</info>", correct: true}
+        - {value: "<info>symlink</info>", correct: false}
+        - {value: "<info>copy</info>", correct: false}

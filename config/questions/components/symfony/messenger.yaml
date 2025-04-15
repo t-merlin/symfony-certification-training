@@ -25,3 +25,11 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "Given the context where the doctrine transport is used, could all the handlers be wrapped in a single transaction ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/4.4/messenger.html#middleware-for-doctrine
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}

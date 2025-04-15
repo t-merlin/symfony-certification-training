@@ -12,3 +12,13 @@
         - {value: "PSR-5", correct: false}
         - {value: "PSR-6", correct: false}
         - {value: "PSR-7", correct: false}
+-
+    question: "What is PSR-3 ?"
+    code_snippet: ~
+    correction_help:
+        - https://www.php-fig.org/psr/psr-3/
+    answers:
+        - {value: "A common logging interface", correct: true}
+        - {value: "A coding style guide", correct: false}
+        - {value: "A utility to convert non-namespaced PHP classes into namespaced ones", correct: false}
+        - {value: "A standard way to convert fully qualified names into file paths", correct: false}

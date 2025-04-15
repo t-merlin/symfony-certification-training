@@ -59,21 +59,21 @@
     correction_help:
         - https://symfony.com/doc/current/form/inherit_data_option.html
     answers:
-        - {value: "PRE_SET_DATA", correct: false}
-        - {value: "POST_SET_DATA", correct: false}
-        - {value: "PRE_SUBMIT", correct: true}
-        - {value: "SUBMIT", correct: true}
-        - {value: "POST_SUBMIT", correct: true}
+        - {value: "<info>PRE_SET_DATA</info>", correct: false}
+        - {value: "<info>POST_SET_DATA</info>", correct: false}
+        - {value: "<info>PRE_SUBMIT</info>", correct: true}
+        - {value: "<info>SUBMIT</info>", correct: true}
+        - {value: "<info>POST_SUBMIT</info>", correct: true}
 -
     question: "How to get the value set for the field <info>title</info> in a form ?"
     code_snippet: ~
     correction_help:
         - https://symfony.com/doc/3.0/reference/forms/twig_reference.html#form-variables-reference
     answers:
-        - {value: "{{ form.vars.title.value }}", correct: false}
-        - {value: "{{ form.vars.title }}", correct: false}
-        - {value: "{{ form.title.vars.value }}", correct: true}
-        - {value: "{{ form.title }}", correct: false}
+        - {value: "<info>{{ form.vars.title.value }}</info>", correct: false}
+        - {value: "<info>{{ form.vars.title }}</info>", correct: false}
+        - {value: "<info>{{ form.title.vars.value }}</info>", correct: true}
+        - {value: "<info>{{ form.title }}</info>", correct: false}
 -
     question: "Is there a way to make sure the <info>{{ form_end(form) }}</info> does not render the fields who have not been rendered previously ?"
     code_snippet: ~
@@ -82,3 +82,26 @@
     answers:
         - {value: "Yes", correct: true}
         - {value: "No", correct: false}
+-
+    question: "Which of the following are Symfony built-in field types ?"
+    code_snippet: ~
+    correction_help:
+        - http://symfony.com/doc/current/reference/forms/types.html#supported-field-types
+    answers:
+        - {value: "<info>IntervalType</info>", correct: false}
+        - {value: "<info>NumberType</info>", correct: true}
+        - {value: "<info>PercentType</info>", correct: true}
+        - {value: "<info>RangeType</info>", correct: true}
+        - {value: "<info>IntegerType</info>", correct: true}
+        - {value: "<info>MoneyType</info>", correct: true}
+        - {value: "<info>DecimalType</info>", correct: false}
+-
+    question: "Assuming an application that stores money amounts multiplied by 100 (e.g. 1.23 is stored as 123), what option is needed to be set to display the value correctly to the user ?"
+    code_snippet: ~
+    correction_help:
+        - https://symfony.com/doc/2.3/reference/forms/types/money.html
+    answers:
+        - {value: "<info>scale</info>", correct: false}
+        - {value: "<info>divisor</info>", correct: true}
+        - {value: "<info>by_reference</info>", correct: false}
+        - {value: "<info>multiply</info>", correct: false}

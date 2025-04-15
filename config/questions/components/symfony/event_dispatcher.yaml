@@ -33,3 +33,29 @@
         - {value: "They are executed in the alphanumeric order", correct: false}
         - {value: "A <info>InvalidPriorityException</info> is thrown", correct: false}
         - {value: "They are executed in the order they have been added to the dispatcher", correct: true}
+-
+    question: "Is the following code valid ?"
+    code_snippet: |
+        <?php
+
+        namespace App;
+
+        use App\Event\MyCustomEvent;
+        use Symfony\Component\DependencyInjection\ContainerBuilder;
+        use Symfony\Component\EventDispatcher\DependencyInjection\AddEventAliasesPass;
+        use Symfony\Component\HttpKernel\Kernel as BaseKernel;
+
+        class Kernel extends BaseKernel
+        {
+          protected function build(ContainerBuilder $container)
+          {
+            $container->addCompilerPass(new AddEventAliasesPass([
+              MyCustomEvent::class => 'my_custom_event',
+            ]));
+          }
+        }
+    correction_help:
+        - https://symfony.com/doc/4.4/event_dispatcher.html#event-aliases
+    answers:
+        - {value: "Yes", correct: true}
+        - {value: "No", correct: false}
