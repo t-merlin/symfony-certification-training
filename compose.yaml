@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+    php:
+        build: .
+        container_name: php82-cli
+        volumes:
+            - .:/app
+        working_dir: /app
+        tty: true
